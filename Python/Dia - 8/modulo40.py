@@ -1,1 +1,1 @@
-# Projeto: App cotação Dolar com PI JSON, Tkinter, Matplotlib
+# MODULO 40 - Projeto: App cotação Dolar com PI JSON, Tkinter, Matplotlib
