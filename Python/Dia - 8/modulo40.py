@@ -1,0 +1,1 @@
+# Projeto: App cotação Dolar com PI JSON, Tkinter, Matplotlib
