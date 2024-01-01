@@ -15,7 +15,7 @@ Dentro de cada subpasta (referente a um tópico específico), você encontrará:
 
 ## Como Utilizar Este Repositório
 
-1. **Escolha um Módulo:** Navegue até a pasta correspondente ao tópico que deseja estudar.
+1. **Escolha um Dia/Tópico:** Navegue até a pasta correspondente ao tópico que deseja estudar.
 2. **Explore o Conteúdo:** Leia o README, examine os exemplos de código e documentação.
 3. **Experimente:** Modifique os exemplos, crie novos cenários e experimente com o tópico.
 4. **Contribua:** Sinta-se à vontade para contribuir adicionando mais exemplos, corrigindo erros ou propondo melhorias nos módulos existentes.
