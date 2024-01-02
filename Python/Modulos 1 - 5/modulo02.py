@@ -18,3 +18,25 @@
 
 # Para definir e exemplificar cada tipo de dado:
 
+var1 =  'Hello World' # Tipo String (str)
+
+var2 = 20             # Tipo inteiro (int)
+var3 = 20.5           # Tipo float (float)
+var4 = 1j             # Tipo complex
+
+var5 = ['maca', 'banana', 'cereja'] # Tipo de sequencia - lista
+var6 = ('maca', 'banana', 'cereja') # Tipo de sequencia - Tupla
+var7 = range(3) # Tipo de sequencia - Range
+
+var8 = {"Nome": "Jhon", "Idade" : 36} # Tipo de mapeamento - Dict
+
+var9 = {"Banana", "maca", "Cereja"}  # Tipos de conjunto - Set
+var10 = frozenset({'banana', 'maca', 'cereja'}) # Tipo de conjunto - Frozenset
+
+var11 = True                 # Tipo boolean
+
+var12 = b"range"             # Tipo byte
+var13 = bytearray(5)         # Tipo Bytearray
+var14 = memoryview(bytes(5)) # Tipo memoryview
+
+# CONFIGURAÇÃO DE TIPOS DE DADOS ESPECIFICOS:
