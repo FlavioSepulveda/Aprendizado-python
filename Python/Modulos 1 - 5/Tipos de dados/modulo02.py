@@ -141,3 +141,46 @@ print(num)
 
 print(random.randrange(1, 20)) # Gera um numero aleatorio entre 1 e 20
 print('\n') # caractere de escape - gera uma quebra de linha
+
+
+# Cating 2.0
+# Ato de converter/definir tipos de dados 
+# Os tipos de dados e tipos primitivos em python podem ser modificados com os construtores.
+
+# int() - Constroi um numero inteiro a partir de um literal inteiro, um literal inteiro, um literal flutuante (removendo todos os decimais) ou um literal de string (desde que a string represente um numero inteiro).
+
+# float() - Constroi um numero flutuante a partir de um literal flutuante ou um literal de string(desde que a string represent um flutuante ou um inteiro)
+
+# str() - Cosntroi uma string a partir de uma ampla variedade de tipos de dados, incluindo strings, literais innteiros e literais flutuantes.
+
+# EXEMPLOS 01:
+variavel_ex1 = int(1)   # Resultado é 1
+variavel_ex2 = int(2.4) # Resultado é 2
+variavel_ex3 = int('3') # Resultado é 3
+
+print(variavel_ex1)
+print(variavel_ex2)
+print(variavel_ex3)
+
+
+# EXEMPLOS 01:
+variavel_ex4 = float(1)   # Resultado é 1.0
+variavel_ex5 = float(2.4) # Resultado é 2.4
+variavel_ex6 = float('3') # Resultado é 3
+
+print(variavel_ex4)
+print(variavel_ex5)
+print(variavel_ex6)
+
+
+# EXEMPLOS 01:
+variavel_ex7 = str('1s')   # Resultado é 1
+variavel_ex8 = str(2.4) # Resultado é 2
+variavel_ex9 = str('3') # Resultado é 3
+
+print(type(variavel_ex7))
+print(type(variavel_ex8))
+print(type(variavel_ex9))
+
+
+
