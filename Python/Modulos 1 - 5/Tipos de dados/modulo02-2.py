@@ -54,4 +54,43 @@ txt = 'Ola, meu nome é Antônio Fávio, muito prazer!' # Texto a ser verificado
 var1 = 'muito' in txt                                # Fazendo a verificação com o uso da função in
 
 print(var1)                                          # Demonstrando se a verificação é verdadeira ou falsa 
+# Exemplo que resulta em falso:
+print("Carro" in txt)
 
+if 'meu' in txt:                # Se "Meu" estiver em txt
+    print('Sim, esta presente') # Se "Meu" estiver dentro de txt, retorna a mensagem
+
+# Verificando se não esta em txt:
+if 'meu' not in txt:
+    print("'meu', não esta em txt.") # Se "Meu" não estiver dentro de txt, retorna a mensagem
+
+# FATIAMENTO DE STRINGS EM PYTHON
+    '''
+        O Fatiamento ocorre quando você traves de um determinado codigo pode tirar uma parte de uma string.
+    ''' 
+nome = "Antonio Flavio"     # Fatiando meu nome
+print(nome[2:5])         # A criação de fatias funciona colocando o indice a ser fatiado dentro de colchetes 
+# Pegando apenas o sobrenome:
+print(nome[8:15])
+# pegando do inicio
+print(nome[:8])
+# Pegando do meio ate o final
+print(nome[8:])
+
+# INDEXAÇÃO NEGATIVA É PERMITIDA;
+print(nome[-5:-2])
+
+# MODIFICAÇÃO DE STRINGS
+
+sTeste = "Antonio Flavio"
+teste2 = sTeste.upper() # O método upper coloca todas as letras em maiusculas
+
+print(teste2) # Exibindo o exemplo
+
+# Fazendo a mesma coisa so que tornando todos em minusculas
+print(sTeste.lower())   # Exibindo resultados
+
+
+
+sTeste2 = "  Antonio Flavio  "
+print(">"+sTeste2.strip()+"<")  # Strip remove espaçamentos do inicio e fim
