@@ -94,3 +94,22 @@ print(sTeste.lower())   # Exibindo resultados
 
 sTeste2 = "  Antonio Flavio  "
 print(">"+sTeste2.strip()+"<")  # Strip remove espaçamentos do inicio e fim
+
+# Metodo replace
+sTeste3 = "Antonio Flavio"
+print(sTeste3.replace("Flavio", "Sepulveda")) # Este metodo substitui uma palavra
+
+# Metodo Split
+lista = 'Carro, Moto, Caminhao'
+# O metodo split transforma frases em itens dentro de uma lista mediante a um separador 
+print(lista.split(",")) # O Separador deste caso foi a virgula
+
+# Reforço de conteudo:
+# Concatenação de strings
+
+a = "Antonio"
+b = "Flavio"
+
+c = a + " " + b # Quando se trata de strings o operador de adição concatena as strings
+
+print(c)
