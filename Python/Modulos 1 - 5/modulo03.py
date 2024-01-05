@@ -122,3 +122,18 @@ print(xxx is not yyy) # Perguntando se "xxx" não é "yyy", então o retorno ser
 print(xxx != yyy) # Resulta false - por serem diferentes em endereço, mas iguais em questão de conteudo.
 
 # Operadores de Associação
+# São usados para checar se um valor é apresentado dentro de um objeto
+
+objeto1 = ['maca', 'banana']
+# objeto2 = []
+# Operador "in" verifica se dentro do objeto está o valor que você procura.
+print('banana' in objeto1) # Ele ira retornar verdadeiro porque banana esta dentro do objeto.
+
+# Operador "not in" verifica se o valor não esta dentro do objeto.
+print('banana' not in objeto1) # Irá resultar em false poque o valor existe dentro do objeto.
+print('abacaxi' not in objeto1) # Irá resultar em true poque o valor não existe dentro do objeto.
+
+# O mesmo funciona com numeros: 
+_xxxx = [348, 45, 150]
+print(34 in _xxxx)      # Nesta o retorno é falso porque este valor não existe dentro do objeto.
+print(34 not in _xxxx)  # Nesta o retorno é verdadeiro, porque o valor não existe la dentro.
