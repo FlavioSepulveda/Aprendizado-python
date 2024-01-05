@@ -34,6 +34,7 @@ u = 5
 v = 5
 p = 5
 print(x)
+# Dentre os operadores de atribuição é tambem conhecido como operadores de incrmento e decremento:
 
 x += 5 # É o mesmo que x = x + 5
 print(x)
@@ -49,8 +50,6 @@ v //= 2 # É o mesmo que v = v // 2
 print(v)
 p **= 2 # É o mesmo que p = p ** 2
 print(p) 
-
-# Dentre os operadores de atribuição é tambem conhecido como operadores de incrmento e decremento:
 
 # Operadores de comparação
 
