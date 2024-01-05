@@ -25,6 +25,11 @@ print(a // b) # Deve retornar 2
 print(a ** b) # Deve retornar 25
 
 # Operadores de atribuição
+# O Sinal de igual é um operador de atribuição simples:
+x = 5
+print(x)
+
+# Dentre os operadores de atribuição é tambem conhecido como operadores de incrmento e decremento:
 
 # Operadores de comparação
 
