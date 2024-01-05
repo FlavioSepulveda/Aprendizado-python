@@ -12,6 +12,17 @@
     // - Operador de Arredondamento de divisão
     ** - Operador de exponenciação
 '''
+# Exemplos:
+a = 5
+b = 2
+
+print(a + b) # Deve retornar 7
+print(a - b) # Deve retornar 3
+print(a * b) # Deve retornar 10
+print(a / b) # Deve retornar 2.5
+print(a % b) # Deve retornar 1
+print(a // b) # Deve retornar 2
+print(a ** b) # Deve retornar 25
 
 # Operadores de atribuição
 
