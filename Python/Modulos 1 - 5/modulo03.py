@@ -58,6 +58,30 @@ print(p)
     Os operadores de comparação retornam valores booleanos - True/False.
     Estes operadores são comuns em estruturas condicionais (Ex.: if's, while...)
 '''
+# São utilizados para definir o fluxo de um programa por meio de condições.
+
+# OS OPERADORES COMPARATIVOS SÃO:
+_xx = 5 # Variavel 1
+_yy = 3 # Variavel 2
+
+# Exemplos:
+# Operador de Igualdade:
+print(_xx == _yy)
+
+# Operador de Diferente de...
+print(_xx != _yy)
+
+# Operador Maior que...
+print(_xx > _yy)
+
+# Operador Menor que...
+print(_xx < _yy)
+
+# Operador Maior ou igual a...
+print(_xx >= _yy)
+
+# Operador Menor ou igual a...
+print(_xx <= _yy)
 
 # Operadores lógicos
 
