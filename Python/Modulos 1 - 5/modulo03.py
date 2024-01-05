@@ -104,6 +104,21 @@ print(not(False)) # Ele ira inverter qualquer resultado booleano ate mesmo que s
 # Operadores de identidade
 # Verificam a identidade de um objeto.
 
+# Exemplos
+# Os objetos a baixo são objetos com o mesmo conteudo, mas com endereçamento diferente então, não são iguais.
+xxx = ['maca', 'banana']
+yyy = ['maca', 'banana']
+# Já neste caso estamos atribuindo a um objeto um objeto criado anteriormente.
+zzz = xxx
 
+print(xxx is zzz) # Perguntando se "xxx" é "zzz", então o retorno sera true.
+print(xxx is yyy) # Perguntando se "xxx" é "yyy", então o retorno sera false.
+print(xxx == yyy) # Perguntando se "xxx" contem o mesmo conteudo e são do mesmo tipo de objeto "yyy", então o retorno sera true.
+
+# Juntamente do "Is" temos o "Is not", ele verifica o contrario do "Is".
+print(xxx is not zzz) # Perguntando se "xxx" não é "zzz", então o retorno sera false.
+print(xxx is not yyy) # Perguntando se "xxx" não é "yyy", então o retorno sera true.
+# Perguntando por meio de um operador de comparação se os objetos são iguais:
+print(xxx != yyy) # Resulta false - por serem diferentes em endereço, mas iguais em questão de conteudo.
 
 # Operadores de Associação
