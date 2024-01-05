@@ -52,6 +52,12 @@ p **= 2 # É o mesmo que p = p ** 2
 print(p) 
 
 # Operadores de comparação
+# Os operadores logicos trabalham dentro das logicas condicionais fazendo algo similar a uma pergunta:
+# Por exemplo: Três é maior que cinco? (3 > 5)? 
+'''
+    Os operadores de comparação retornam valores booleanos - True/False.
+    Estes operadores são comuns em estruturas condicionais (Ex.: if's, while...)
+'''
 
 # Operadores lógicos
 
