@@ -85,6 +85,25 @@ print(_xx <= _yy)
 
 # Operadores lógicos
 
+'''
+    Os operadores logicos funcionam combinando condições:
+    and - Se as duas condições são duplamenta verdadeiras (Similar a porta logica "And");
+    or - se uma condição ou outra é verdadeira (Similar a porta logica "ou");
+'''
+# EXEMPLOS:
+xx = 5
+print(x > 3 and 15 < 10) # As duas irão retornar falso pois o "And" retorna verdadeiro apenas quando as duas são verdadeiras.
+
+# EXEMPLOS2:
+print(x > 3 or x < 4) # Ele retorna verdadeiro quando pelo menos uma das expressoes retorna verdadeiro.
+
+# Operador "Not" - Similar a porta logica "NOT":
+print(not(x > 3 and 15 < 10)) # Ele ira inverter qualquer resultado booleano.
+print(not(False)) # Ele ira inverter qualquer resultado booleano ate mesmo que seja direto.
+
 # Operadores de identidade
+# Verificam a identidade de um objeto.
+
+
 
 # Operadores de Associação
