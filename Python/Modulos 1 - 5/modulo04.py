@@ -15,3 +15,23 @@
 
 primeira_lista = ['Bolo', 'Lasanha', 'Cafe']
 print(primeira_lista)
+
+# Acessando itens da lista
+
+# Alterando itens da lista
+
+# Adicionando itens na lista
+
+# Remover itens da lista
+
+# Utilização de loops com listas
+
+# Compreensão de listas
+
+# Classificação de listas
+
+# Copiando listas
+
+# Juntando listas
+
+# 
