@@ -135,3 +135,10 @@ while i < 4:
 tupla6 = ('Cavaleiro da Lua', 'Loki', 'Homem de ferro', 'Capitão America')
 tupla7 = ('Constantine', 'Batman', 'Flash', 'Arqueiro Verde')
 
+tupla8 = tupla6 + tupla7
+# Multiplicar o valor de uma tupla
+tupla9 = tupla1 * 2
+
+
+print(tupla8)
+print(tupla9)
