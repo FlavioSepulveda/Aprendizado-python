@@ -88,7 +88,28 @@ del tupla3
 # print(tupla3)
 
 # Descompactando tuplas
-tupla4 = ('Maçã', 'Banana', 'Uva', 'Abacaxi')
+tupla4 = ('Maçã', 'Banana', 'Uva', 'Abacaxi') # A forma que esta é chamada de compactada
+print(tupla4)
+
+(fruta1, fruta2, fruta3, fruta4) = tupla4 # Cada variavel ira receber um valor da tupla.
+
+print(fruta1) # Imprime maçã
+print(fruta2) # Imprime banana
+print(fruta3) # Imprime Uva
+print(fruta4) # Imprime abacaxi
+
+'''
+    No exemplo acima a descompactação da tupla ocorre com base na quantidade de variaveis que são apresentadas a ela.
+    Para que seja feita a extração com menos valores, utilizamos um asterisco ( * ), para fazer a coleta de dados remanecentes e por em uma lista.
+'''
+#  Desta maneira
+tuplaQuatro = ('Morango', 'Pessego', 'Goiaba', 'Laranja', 'Abacate')
+
+(Fruta1, Fruta2, * Fruta3) = tuplaQuatro 
+
+print(Fruta1) # Imprime Morango
+print(Fruta2) # Imprime Pessego
+print(Fruta3) # Imprime uma Lista com ['Goiaba','Laranja','Abacate']
 
 # Loops atravez de uma tupla
 tupla5 = ('HTML', 'CSS', 'JavaScript', 'Python')
