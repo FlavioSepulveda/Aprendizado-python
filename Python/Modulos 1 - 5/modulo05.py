@@ -114,6 +114,24 @@ print(Fruta3) # Imprime uma Lista com ['Goiaba','Laranja','Abacate']
 # Loops atravez de uma tupla
 tupla5 = ('HTML', 'CSS', 'JavaScript', 'Python')
 
+# Os loops utilizando tuplas funcionam da seguinte maneira
+# For e While
+# Eles funcionam da mesma maneira que os loops de listas:
+# for x in tupla5:
+#     print(x)
+# # Usando o método len para informar o comprimento da tupla
+# for i in range(len(tupla5)):
+#     print(tupla5[i])
+
+# Usando o while
+i = 0
+# Enquanto i for menor que 4.
+while i < 4:
+    # Eu escrevo isso.
+    print(tupla5[i])
+    i+=1
+
 # Juntar Tuplas 
 tupla6 = ('Cavaleiro da Lua', 'Loki', 'Homem de ferro', 'Capitão America')
 tupla7 = ('Constantine', 'Batman', 'Flash', 'Arqueiro Verde')
+
