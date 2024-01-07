@@ -57,6 +57,35 @@ else:
 
 # Atualizar tuplas
 tupla3 = ('Cachorro', 'Gato', 'Passarinho', 'Borboleta')
+# A tuplas não podem ser alteradas, mas podemos fazer outras coisas
+# Podemos converter a tupla em lista e logo apos em tupla novamente
+# da seguinte maneira:
+print(tupla3)
+# tupla_3 = list(tupla3) # Convertendo a gambiarra em tupla
+# tupla_3[1] = 'Leão'
+# tupla3 = tuple(tupla_3)
+# print(tupla3)
+#  Podemos utilizar o metodo append utilizando a mesma gambiarra anterior
+# tupla_3 = list(tupla3)
+# tupla_3.append("Formiga")
+# tupla3 = tuple(tupla_3)
+# print(tupla3)
+
+# Uma alternativa de adição
+tupla_3 = ('Lemori',)
+tupla3 += tupla3
+print(tupla3)
+
+# Na tupla podemos remover itens utilizando a conversão de tupla em lista para modificar-la
+tupla = list(tupla3)
+tupla.remove("Cachorro")
+tupla3 = tuple(tupla)
+
+print(tupla)
+# Podemos remover com o método del
+
+del tupla3
+# print(tupla3)
 
 # Descompactando tuplas
 tupla4 = ('Maçã', 'Banana', 'Uva', 'Abacaxi')
