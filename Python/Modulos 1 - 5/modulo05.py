@@ -32,6 +32,28 @@ print(type(exTupla3))
 
 # Acessando itens de uma tupla
 tupla2 = ('Arroz', 'Pure', 'Carne', 'Feijão')
+# Para acessar um indice da tupla referenciando o indice dentro do print.
+print(tupla2[1])    # Deve devolver o valor pure
+# Podemos fazer isso por meio da indexação negativa assim como nas listas
+print(tupla2[-1]) # Ira retornar o valor Feijão.
+# Podemos acessar com base em intervalos.
+print(tupla2[1:3]) # ira retornar Pure e carne, o ultimo valor é excluso
+# Omitindo o indice inicial ele iniciara do primeiro e ira parar no indice final.
+print(tupla2[:4]) 
+# Desta mesma maneira podemos fazer com a indexação negativa e omitindo o ultimo indice tambem
+print(tupla2[1:])       # O mitindo o ultimo item 
+print(tupla2[-4:-1])    # Utilizando intervalo de indexação negativa 
+print(tupla2[:-1])      # Omitindo o index negativo inicial
+print(tupla2[-4:])      # Omitindo o index negativo final
+
+# É Possivel verificar se um item esta dentro da tupla
+print("Suco" in tupla2) # Ele ira retornar falso.
+
+# Podemos criar condicionais mediante isso
+if 'Suco' in tupla2:
+    print('Sim, pertence a tupla.')
+else:
+    print('Não, não pertence a tupla.')
 
 # Atualizar tuplas
 tupla3 = ('Cachorro', 'Gato', 'Passarinho', 'Borboleta')
