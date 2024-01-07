@@ -112,9 +112,36 @@ print(setima_lista)
 # Para gerar uma execução sem erro e mantendo a existencia da lista, ao inves de utilizar o método del, utiliza-se o metodo clear.
 setima_lista.clear()
 print(setima_lista) # Ira imprimir uma lista vazia
-
-
 # Utilização de loops com listas
+
+'''
+    A utilização de estruturas de repetição em uma lista.
+    Podemos utilizar os tipos for e while.
+'''
+# Criando uma lista para o exemplo:
+oitava_lista = ['Minecraft', 'League of legends', 'Undertale', 'Terraria']
+
+# Primeiro caso com o loop for:
+
+for x in oitava_lista:
+    # Imprima o item que voce obter dentro de x.
+    print(x)
+
+
+# Utilizando o loop for para percorrer pelo indice usando as funções len e range
+for i in range(len(oitava_lista)):
+    print(oitava_lista[i]) # Quando mandamos imprimir desta maneira: (print(i)) ele ira imprimir o indice.
+
+# Segundo caso com o loop while:
+# Para utilizarmos o While precisamos de uma varivael auxiliar, onde nesse caso sempre usamos a variavel "i".
+i = 0
+while i > 4:
+    print(oitava_lista[i])
+    i = i + 1 # Usar *i += 1* irá resultar na mesma coisa.
+print('Fim da execução 1.')
+
+# Uso da compreensão de loops - Uma sintaxe mais simples que resulta  na mesma coisa.
+[print(x) for x in oitava_lista] # Criando uma compreensão de listas pro loop for.
 
 # Compreensão de listas
 
