@@ -239,3 +239,19 @@ print(outra)
 print(outra2)
 # Juntando listas
 
+marvel = ['Homem de ferro', 'Thor', 'Capitão America']
+dcu = ['Batman', 'Flash', 'Constantine']
+
+# A junção é realizada pelo metodo:
+# A maneira mais facil é criar uma variavel de lista vazia e somar as listas anteriores.
+# Adicionar 1 por 1 tbm é usavel
+# Desta maneira
+# for x in dcu:
+#     marvel.append(x)
+
+# Outra forma é utilizando o metodo extend
+marvel.extend(dcu)
+
+
+
+print(marvel)
