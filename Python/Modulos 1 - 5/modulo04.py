@@ -69,9 +69,33 @@ else:
     print('Não, colher não esta na lista.')
 
 # Adicionando itens na lista
+sexta_lista = ['Colher', 'Tesoura', 'Prato', 'Geladeira']
+
+# Pra alterar o indice de um objeto
+# primeiro referenciamos o indice e o novo valor dele
+sexta_lista[0] = 'Garfo'
+print(sexta_lista)
+# Podemos alterar com base no intervalo
+# sexta_lista[2:3] = ['Relógio de parede', 'Livro']
+# print(sexta_lista)
+
+sexta_lista[1:3] = ['Relógio de parede', 'Livro', 'Brinquedo'] # Ele vai adcionar mais um lugar na fila
+print(sexta_lista)
+print(len(sexta_lista)) # Vai printar 5 indices
+# Quando temos apenas 1 valor ao imprimirla ele vai excluir
+sexta_lista[1:4] = ['Livro']
+print(sexta_lista)
+print(len(sexta_lista)) # Vai printar 5 indices
+
+# Para inserir valores na lista podemos utilizar do método insert
+sexta_lista.insert(1, 'Garrafa') # Ele pede dois valores e os adiciona antes do indice estipulado.
+# Isso sem alterar os itens da lista
+print(sexta_lista)
 
 
 # Remover itens da lista
+# 
+
 
 # Utilização de loops com listas
 
