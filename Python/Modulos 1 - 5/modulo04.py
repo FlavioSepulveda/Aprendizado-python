@@ -187,6 +187,38 @@ print(lista)
 
 # Classificação de listas
 
+comida = ['Maçã', 'Banana', 'Uva', 'Abacaxi', 'Pessego']
+
+numero = [100, 50, 30, 40, 75]
+
+#  metodo Sort - Classifica em ordem ascendente
+# comida.sort()
+# numero.sort()
+
+#  metodo sort com reverse;
+# comida.sort(reverse = True)
+# numero.sort(reverse = True)
+
+# Criando classificação da função
+def myFunc(n):
+    return abs(n - 50)
+
+print(comida)
+# print(numero)
+#  Dentro do parenteses a função deve ser chamada pelo metodo key
+numero.sort(key = myFunc)
+print(numero)
+# O metodo sort joga todos os que tiverem letras minusculas para o fim da lista dando prioridade para os de letra maiuscula.
+# Para classsificar sem essa distinção fazemos assim:
+comida.sort(key = str.lower) # A função lower chama independente de maiusculas e minusculas.
+
+# Método reverse
+comida.reverse()
+numero.reverse()
+# ele inverta a ordem dos indices na lista
+print(comida)
+print(numero)
+
 # Copiando listas
 
 # Juntando listas
