@@ -14,9 +14,24 @@
 '''
 
 primeira_lista = ['Bolo', 'Lasanha', 'Cafe']
-print(primeira_lista)
 
+print(primeira_lista)
+# Para saber o comprimento da lista usamos a função len
+print(len(primeira_lista)) # Esta lista tem 3 itens
+
+# As listas podem ser de varios tipos por exemplo itens inteiros:
+segunda_lista = [1, 2, 3, 4]
+
+print(segunda_lista)
+print(len(segunda_lista)) # Esta lista tem 4 itens
 # Acessando itens da lista
+# Usando a função type podemos ver que a classe das listas é 'list'
+print(type(segunda_lista))
+
+# Método construtor de listas;
+# O método list()
+terceira_lista = list(('Sherlock Holmes', 'H.P Lovecraft', 'Edgar Alan Poe'))
+print(terceira_lista)
 
 # Alterando itens da lista
 
