@@ -106,7 +106,7 @@ print(setima_lista)
 setima_lista.pop() # Quando sem o indice ele sempre irá remover o ultimo item da lista.
 print(setima_lista)
 #  Método del
-del setima_lista[2]
+#del setima_lista[2]
 print(setima_lista)
 # Pro del apagar a lista inteira é so utilizar-lo sem indice porem causa um erro na execução do codigo.
 # Para gerar uma execução sem erro e mantendo a existencia da lista, ao inves de utilizar o método del, utiliza-se o metodo clear.
@@ -144,6 +144,46 @@ print('Fim da execução 1.')
 [print(x) for x in oitava_lista] # Criando uma compreensão de listas pro loop for.
 
 # Compreensão de listas
+comidas = ['Maçã', 'Banana', 'Uva', 'Abacaxi', 'Pessego']
+
+# A compreensão de listas oferece uma sintaxe mais curta para quando você quer criar uma nova lista com base nos valores ja existentes;
+#  Da forma convencional:
+# nova_lista = []
+# for x in comidas:
+#     if 'e' in x:
+#         nova_lista.append(x)
+
+# Utilizando a compreensão
+# Percorrendo "Comidas" irei adicionar na nova lista apenas oque tem a letra E.
+# nova_lista = [x for x in comidas if 'e' in x] 
+
+# # Imprimindo a nova lista
+# print(nova_lista)
+# # Percorrendo "Comidas", Pegarei todos diferentes de "Uva".
+# nova_lista2 = [x for x in comidas if x != 'Uva']
+
+# Criando uma nova lista onde os valores serao numeros
+nova_lista2 = [x for x in range(10)]
+print(nova_lista2)
+
+# Criando uma lista apenas com numeros pares
+
+pares = [x for x in range(10) if x % 2 == 0]
+print(pares)
+# Criando uma lista de gritos
+gritos = [x.upper() for x in comidas]
+print(gritos)
+# Criando uma lista de sussuros
+sussurros = [x.lower() for x in comidas]
+print(sussurros)
+
+# Subtituindo por alguma palavra
+olas = ['ola' for x in comidas]
+print(olas)
+
+# Colocando uma condicional
+lista = [x if x != 'Uva' else 'Uva verde' for x in comidas]
+print(lista)
 
 # Classificação de listas
 
