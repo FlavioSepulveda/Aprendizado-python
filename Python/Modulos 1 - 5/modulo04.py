@@ -94,7 +94,24 @@ print(sexta_lista)
 
 
 # Remover itens da lista
-# 
+# Primeiramente temos o metodo remove:
+setima_lista = ['Carro', 'Moto', 'Avião', 'Caminhão'] # LISTA DE EXEMPLO
+print(setima_lista)
+setima_lista.remove('Carro') # Ele remove um valor de dentro da lista, caso seja uma string lembre-se letras maiusculas e minusculas fazem diferencia
+print(setima_lista)
+# Método pop
+setima_lista.pop(1) # ele remove com base no index
+print(setima_lista)
+
+setima_lista.pop() # Quando sem o indice ele sempre irá remover o ultimo item da lista.
+print(setima_lista)
+#  Método del
+del setima_lista[2]
+print(setima_lista)
+# Pro del apagar a lista inteira é so utilizar-lo sem indice porem causa um erro na execução do codigo.
+# Para gerar uma execução sem erro e mantendo a existencia da lista, ao inves de utilizar o método del, utiliza-se o metodo clear.
+setima_lista.clear()
+print(setima_lista) # Ira imprimir uma lista vazia
 
 
 # Utilização de loops com listas
