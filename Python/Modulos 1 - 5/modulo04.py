@@ -220,6 +220,22 @@ print(comida)
 print(numero)
 
 # Copiando listas
+herois = ['Superman', 'Batman', 'Mulher Maravilha']
 
+# Não podemos utilizar o operador de = pra copiar listas
+# outras = herois
+# herois.append('Aquaman')
+
+# Deve ser feita desta maneira
+outra = herois.copy()
+herois.append('Aquaman') # Metodo Extend add uma coleção inteira
+
+# A outra forma de se utilizar a copia é
+outra2 = list(herois)
+outra2.append('Raio negro')
+
+print(herois)
+print(outra)
+print(outra2)
 # Juntando listas
 
