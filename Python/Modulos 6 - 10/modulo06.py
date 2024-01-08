@@ -21,6 +21,19 @@ set2 = set(('Carro', 'Moto', 'Caminhão', 'Barco')) # Dois parenteses lembre-se
 print(set2)
 
 # Acessando os itens do set
+'''
+    Como os itens do Set não são indexados, posso percorrer ele usando um loop for ou usando o metodo in.
+'''
+set3 = {'Bolo', 'Café', 'Lasanha', 'Arroz'}
+print(set3)
+
+# Criando o loop for para percorrer um set
+
+for x in set3:
+    print(x)
+
+print('Bolo' in set3) # Com o metodo in
+
 
 # Adcionando itens do set
 
