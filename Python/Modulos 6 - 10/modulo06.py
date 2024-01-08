@@ -36,6 +36,20 @@ print('Bolo' in set3) # Com o metodo in
 
 
 # Adcionando itens do set
+set4 = {'Liandri', 'Eco De Luden', 'Orb do Infinito'}
+print(set4)
+
+# Como o metodo append não funciona neste tipo, utilizamos um metodo add
+set4.add('Runaan')
+print(set4)
+
+# Podemos juntar, mais um set no set anterior da seguinte maneira
+set5 = {'Força do vendaval', 'Mata crakens'}
+# O método update funciona pra mesclar sets
+set4.update(set5)
+
+print(set4)
+# Pode ser qualquer tipo de uniao podendo ser com listas, tuplas ou dicionarios.
 
 # Remover itens do set
 
