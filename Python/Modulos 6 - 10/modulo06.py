@@ -52,6 +52,24 @@ print(set4)
 # Pode ser qualquer tipo de uniao podendo ser com listas, tuplas ou dicionarios.
 
 # Remover itens do set
+set6 = {'Gato', 'Cachorro', 'Papagaio'}
+
+# Para remover podemos usar o metoro remove da seguinte forma
+# set6.remove('Papagaio')
+print(set6)
+# Este metodo quando não encontra o item referido ele gera um erro.
+
+# Metodo discard
+# set6.discard('Cachorro') # Este metodo quando não encontra o item referido ele não gera um erro.
+print(set6)
+
+# Método pop - Remove sempre o ultimo item do set
+set6.pop()
+print(x)
+x = print(set6)
+
+# Tambem podemos usar o metodo clear, porem ele apaga todos os itens do set.
+# Tambem podemos usar o metodo del, porem ele apaga todo o set.
 
 # Loop Atraves de um set
 
