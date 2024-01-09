@@ -57,7 +57,34 @@ print(s)
 if 'Comida Favorita' in zoro:
     print('Sim, ele gosta de cachaça.')
 
+# Alteração de itens dentro dos dicionarios
+nami = {
+    'Anime' : 'One Piece',
+    'Alcunha' : 'Gata Ladra',
+    'Comida Favorita' : 'Laranja'
+}
+
+# Para alterar valores podemos fazer da seguinte forma:
+nami['Anime'] = 'One piece'
+print(nami)
+
+# Podemos modificar com objetos diferentes com o metodo update como o metodo interavel.
+nami.update({'Arco' : 'Arlong Park'})
+print(nami)
 # Adição de itens dentro dos dicionarios
+# Podemos adicionar chaves da mesma maneira que adcionamos valores:
+
+sanji = {
+    'Anime': 'One Piece',
+    'Ocupação': 'Pirata',
+    'Arco': 'Baratier'
+}
+# Para adcionar fazemos da seguinte forma:
+sanji['Cargo'] = 'Cozinheiro'
+print(sanji)
+# Ou podemos usar o método Update:
+sanji.update({'Nacionalidade' : 'Frances'})
+print(sanji)
 
 # Remoção de itens dentro dos dicionarios
 
