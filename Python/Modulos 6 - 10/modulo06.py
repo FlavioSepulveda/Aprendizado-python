@@ -73,4 +73,9 @@ x = print(set6)
 
 # Loop Atraves de um set
 
+set7 = {'Gato', 'Cachorro', 'Papagaio'}
+# Para cada item do set 1 ele ira imprimir a variavel x
+for x in set7:
+    print(x)
+
 # Juntando coleções do tipo set 
