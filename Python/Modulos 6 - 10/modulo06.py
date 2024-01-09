@@ -79,3 +79,34 @@ for x in set7:
     print(x)
 
 # Juntando coleções do tipo set 
+
+
+primeiro_set = {'a', 'b', 'c'}
+segundo_set = {1, 2, 3, 'b'}
+
+# Método update
+# primeiro_set.update(segundo_set)
+# print(primeiro_set)
+
+# Método Union
+# Este metodo retorna uma nova coleção:
+# terceiro_set = primeiro_set.union(segundo_set)
+# print(terceiro_set) # Ele ira retornar uma nova coleção.
+
+# Quando temos valores duplicados o metodo union não duplica eles.
+
+# Terceira forma é com o método intersection_update()
+# primeiro_set.intersection_update(segundo_set)
+# print(primeiro_set)
+
+# Método intersection
+# quarto_set = primeiro_set.intersection(segundo_set)
+# Todos os itens duplicados vao para esta nova coleção
+# print(quarto_set)
+
+# primeiro_set.symmetric_difference_update(segundo_set) # Ele remove os itens duplicados.
+terceiro_set = primeiro_set.symmetric_difference(segundo_set) #Este metodo verifica os itens que não estão duplicados e retorna uma nova coleção com eles.
+
+print(primeiro_set)
+print(segundo_set)
+print(terceiro_set)
