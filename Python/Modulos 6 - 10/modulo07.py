@@ -87,6 +87,23 @@ sanji.update({'Nacionalidade' : 'Frances'})
 print(sanji)
 
 # Remoção de itens dentro dos dicionarios
+chopper = {
+    'Anime':'One Piece',
+    'Ocupação':'Pirata',
+    'Arco':'Reino de drum'
+}
+# Para remover podemos fazer da seguinte maneira:
+# Podemos usar o metodo pop - Pra remover com base no nome da chave;
+# chopper.pop('Arco')
+# O popitem remove o ultimo item, diferente do pop
+# chopper.popitem()
+# O método del remove de maneira parecida com o pop
+del chopper['Anime'] # Se eu não passar a chave do item, a função del deleta o dicionario todo
+
+# Para apenas limpar os valores, podemos usar o metodo clear.
+chopper.clear()
+print(chopper)
+
 
 # Percorrendo os dicionarios com loops
 
