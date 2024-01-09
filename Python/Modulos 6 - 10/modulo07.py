@@ -106,7 +106,31 @@ print(chopper)
 
 
 # Percorrendo os dicionarios com loops
+# Agora vou usar outros exemplos chega de one piece.
+livros = {
+    'Investigação':'Sherlock Holmes',
+    'Terror':'LoveCraft',
+    'Misterio':'Biblioteca da Meia Noite'
+}
 
+# Percorrendo com o loop for
+# for x in livros:
+    # print(x) # Aqui ele so ira imprimir apenas as chaves.
+
+# Da maneira correta fica assim:
+for x in livros:
+    print(livros[x])
+
+# Podemos usar o metoso value
+for x in livros.values():
+    print(x)
+# Podemos usar o metoso keys para retornar o nome das chaves:
+for x in livros.keys():
+    print(x)
+
+# fazendo com o metodo items:
+for x, y in livros.items():
+    print(x,y)
 # Copiando dicionarios
 
 # Aninhando dicionarios
