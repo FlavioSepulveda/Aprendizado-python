@@ -132,5 +132,18 @@ for x in livros.keys():
 for x, y in livros.items():
     print(x,y)
 # Copiando dicionarios
+comidas = {
+    'Doce':'Sorvete',
+    'Salgado':'Lasanha'
+}
+# Para copiar usamos:
+# Não podemos criar uma variavel e atribuir o dicionario.
+# Devemos fazer da seguinte maneira:
+comidas2 = comidas.copy()
+print(comidas2)
+# Podemos usar o construtor da classe pra criar o dicionario passando outro como parametro
+comidas3 = dict(comidas)
+print(comidas3)
+
 
 # Aninhando dicionarios
