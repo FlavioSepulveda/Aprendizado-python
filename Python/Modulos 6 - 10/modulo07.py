@@ -145,5 +145,38 @@ print(comidas2)
 comidas3 = dict(comidas)
 print(comidas3)
 
-
 # Aninhando dicionarios
+
+# Um dicionario pode conter outros dicionarios;
+myFamily = {
+    'Filho 1': {
+        'Nome':'Flavio',
+        'Idade': 21
+    },
+    'Filho 2': {
+        'Nome':'Ricardo',
+        'Idade': 17
+    },
+    'Filho 3': {
+        'Nome':'Pedro',
+        'Idade': 21
+    }
+}
+
+# Podemos criar dicionarios de fora e atribuir dentro de outros dicionarios:
+Filho4 = {
+        'Nome':'Gabriel',
+        'Idade': 12
+    }
+Filho5 = {
+        'Nome':'Marcos',
+        'Idade': 20
+    }
+# Atribuindo esses valores a um dicionario;
+myFamily2 = {
+    'filho4' : Filho4,
+    'filho5' : Filho5
+}
+
+print(myFamily)
+print(myFamily2)
