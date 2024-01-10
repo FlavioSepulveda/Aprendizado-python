@@ -66,4 +66,10 @@ else:
     print('É menor que 10.') # Ele não verificará as outrtas condicionais.          
 
 # Declaração 'pass':
+# Ela evita um erro de sintaxe.
+a = 50
+b = 100
 
+if a > b:
+    # print("Verdade")
+    pass
