@@ -51,5 +51,19 @@ if a < b or c > a:
     print("Pelo menos uma é verdadeira.")
 
 # Estruturas Condicionais Aninhadas:
+x = 41
+
+# Aninhadas são estruturas condicionais que comportam mais de um if:
+if x > 10:
+    print('Maior doque 10.')
+    if x  > 20:
+        print('Sim, ele é maior.')
+        if x > 50:
+            print('Sim, é maior.')
+        else:
+            print('Não, não é maior.')
+else:
+    print('É menor que 10.') # Ele não verificará as outrtas condicionais.          
+
 # Declaração 'pass':
-# Evita erros de sintaxe em estruturas ainda não implementadas.
+
