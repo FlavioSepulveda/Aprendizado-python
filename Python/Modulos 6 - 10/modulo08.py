@@ -29,6 +29,19 @@ else: # Executa se nenhuma for verdadeira
 print('Fim da Execução.')
 
 # Short Hand If Else -
+# As condicionais são feitas em apenas uma linhas da seguinte forma
+
+a = 200
+b = 50
+
+# Fazemos assim para o if:
+if a > b: print('A é maior que b.')
+
+# Para o else assim:
+print("A") if a < b else print("B")
+
+# operadores ternarios:
+print(" a ") if a < b else print(" = ") if a == b else print(" b ")
 
 # Operadores lógicos -
 
