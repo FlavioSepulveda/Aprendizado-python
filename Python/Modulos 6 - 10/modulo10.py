@@ -58,3 +58,10 @@ def myFunc4(pais = 'Brasil'):
 myFunc4()
 
 # Passando uma lista como argumento
+def minhaFuncao(alimentos):
+    for x in alimentos:
+        print(x)
+
+frutas = ['Maçã', 'Banana', 'Abacaxi']
+# A lista pode ser repassada de forma literal tambem.
+minhaFuncao(frutas)
