@@ -62,5 +62,17 @@ for x in nome:
         break # Parando a execução no "Danny".
     print(x)  # Com o print aqui, ele vai pegar apenas o primeiro nome pois o segundo ja quebra a execução.
 
-    
+    # Instrução "continue" para interromper e constinuar na proxima execução.
 
+    i = 0
+    while i < 6:
+        i += 1 # O indice recebendo 1 fica aqui
+        if (i == 3):
+            continue
+        print(i) # Quando for igual a 3 ele não ira printar o 3, e sim continuar a sequencia sem ele.
+
+    # Funciona com o for tambem:
+    for x in nome:
+        if x == 'Danny': # Ignore Danny.
+            continue
+        print(x)
