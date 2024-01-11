@@ -18,3 +18,17 @@ def myFunc3(x):
 
 resultado = myFunc3(2)
 print(resultado)
+
+# Parametros dentro da função;
+def nomeCompleto(nome, sobrenome):
+    print(nome + sobrenome)
+
+nomeCompleto("Antonio", "Flavio") # A ordem dos parametros auteram os resultados.
+
+# Criando uma func que cria uma lista que recebe uma tupla como parametro:
+def listaNomes(*nomes):
+    for x in nomes:
+        print(x)
+
+listaNomes('Gabriel', 'Danny', 'Arthur')
+# Argumentos de palavra chave
