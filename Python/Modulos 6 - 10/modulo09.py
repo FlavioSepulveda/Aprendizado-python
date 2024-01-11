@@ -87,3 +87,9 @@ for x in exemplo:
         x = x + " e " + y
     print(x)
 # Palavra de Pasagem:
+print('Inicio.')
+for x in [0, 1, 2]:
+    # print(x)
+    pass # Evitando erro de sintaxe
+
+print("Fim")
