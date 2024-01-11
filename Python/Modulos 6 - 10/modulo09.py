@@ -76,3 +76,14 @@ for x in nome:
         if x == 'Danny': # Ignore Danny.
             continue
         print(x)
+
+# Loops aninhados:
+# São loops dentro de loops:
+exemplo = ['Ursula', 'Magali', 'Aparecida']
+exemplo2 = ['Milu', 'Picuta', 'Leona']
+
+for x in exemplo:
+    for y in exemplo2:
+        x = x + " e " + y
+    print(x)
+# Palavra de Pasagem:
