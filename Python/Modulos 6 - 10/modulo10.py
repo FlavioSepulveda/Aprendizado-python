@@ -32,3 +32,20 @@ def listaNomes(*nomes):
 
 listaNomes('Gabriel', 'Danny', 'Arthur')
 # Argumentos de palavra chave
+
+def chamada(primeiro, segundo, terceiro):
+    print('Este é o primeiro: ', primeiro)
+    print('Este é o segundo: ', segundo)
+    print('Este é o terceiro: ', terceiro)
+
+# Quando passamos uma informação para uma função devemos passar os parametros na ordem correta a menos que usemos as keys de cada parametro.
+chamada(terceiro='Gabriel', primeiro='Flavio', segundo='Ricardo')
+
+# Quando não se sabe a quantidade de itens a função vai receber. Usa-se um dicionario.
+
+def NomeCompleto(**nome):
+    # print(nome)
+    for x in nome.values():
+        print(x)
+
+NomeCompleto(pri='Gabriel', seg = 'Silva')
