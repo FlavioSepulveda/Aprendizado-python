@@ -49,3 +49,12 @@ def NomeCompleto(**nome):
         print(x)
 
 NomeCompleto(pri='Gabriel', seg = 'Silva')
+
+# Valor padrão de parametro:
+def myFunc4(pais = 'Brasil'):
+# Atribui-se o padrão com o sinal de igual logo apos o parametro.
+    print('Eu sou do ' + pais)
+
+myFunc4()
+
+# Passando uma lista como argumento
