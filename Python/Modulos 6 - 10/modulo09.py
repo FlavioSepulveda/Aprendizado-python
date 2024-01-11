@@ -44,3 +44,23 @@ for x in range(1, 6, 2): # Definindo o primeiro parametro de inicio fornecendo u
 
 print('Fim da excução')
 # Func  range(Numero do inicio, Numero do fim, Numero do incremento).
+
+# Instrução break - serve pra interromper um fluxo ainda que a condição de um loop seja verdadeira.
+
+i = 1
+while 1 < 6:
+    print(i)
+    if (i == 3):
+        print('Fim da execução com o comando "break".')
+        break
+    i += 1
+
+#  O break tambem pode ser utilizado dentro da função for tambem;
+for x in nome:
+    #print(x)
+    if x == 'Danny':
+        break # Parando a execução no "Danny".
+    print(x)  # Com o print aqui, ele vai pegar apenas o primeiro nome pois o segundo ja quebra a execução.
+
+    
+
