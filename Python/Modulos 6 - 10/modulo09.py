@@ -34,3 +34,13 @@ for x in 'Ola mundo':
 # Podemos  usar um else neste estilo de loop taambem:
 else:
     print('Fim da execução.')
+
+# Função range -ela delimita o inicio e o fim ded uma execução em um determinado raio.
+    
+for x in range(1, 6, 2): # Definindo o primeiro parametro de inicio fornecendo um numero e uma virgula.
+    # Impllemaentar um 3°  valo ele determina ded quanto em qquantoe ele ira iniciar.
+    print(x)  # A função range não precisaa de uma coleção para funcionar
+
+
+print('Fim da excução')
+# Func  range(Numero do inicio, Numero do fim, Numero do incremento).
