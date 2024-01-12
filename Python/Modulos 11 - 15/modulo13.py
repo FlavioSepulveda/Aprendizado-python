@@ -15,10 +15,6 @@ print(p1.x) # vai imprimir o x de dentro da classe.
 # A função interna init que acompanha as classes em sua criação;
 # A função init starta junto com a classe servindo para delimitar certas caracteristicas dentro da classe.
 
-'''
-    Self - Vem do ingles, e significa "A mim mesmo", dentro das classes seria algo do tipo:
-    "A mim mesmo darei o atributo idade."
-'''
     # As funções dentro da classe sempre iniciam com Self.
 class MinhaClasse:
 
@@ -49,3 +45,22 @@ pessoa1.myFunc()
 
 pessoa2 = Pessoa("Antonio", 21, "Masc")
 pessoa2.myFunc()
+
+# O parametro self
+'''
+    Self - Vem do ingles, e significa "A mim mesmo", dentro das classes seria algo do tipo:
+    "A mim mesmo darei o atributo idade."
+'''
+# Ele não precisa necessariamente ser chamado de self.
+# Ele sempre é o primeiro parametro da função.
+
+class Exemplo:
+    def __init__(exemplo, parametro1, parametro2) -> None:
+        exemplo.p1 = parametro1
+        exemplo.p2 = parametro2
+        # Neste exemplo temos uma mudança no self para "Exemplo" onde todas as vezes que eu o referenciar dentro da função init ele deve ser chamado por "Exemplo", No entanto quando de trata de outra função dentro de uma classe.
+    def idade(self):
+        print(self.p2)
+
+pessoa3 = Exemplo("2","4")
+pessoa3.idade()
