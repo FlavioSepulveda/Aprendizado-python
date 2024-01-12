@@ -31,4 +31,21 @@ class MinhaClasse:
 client = MinhaClasse("Antonio", 21)
 
 print(client.nome, client.idade)
-    
+
+# Métodos de objetos - são funções que pertencem a um objeto
+
+# Criando uma classe pessoa;
+class Pessoa:
+    def __init__(self, _nome, _idade, _genero) -> None:
+        self.Nome = _nome
+        self.Idade = _idade
+        self.Genero = _genero
+    # métodos de uma classe são as coisas que aquela classe pode fazer.
+    def myFunc(self):
+        print('Ola, meu nome é ', self.Nome)
+
+pessoa1 = Pessoa("Flavio", 21, "Masc")
+pessoa1.myFunc()
+
+pessoa2 = Pessoa("Antonio", 21, "Masc")
+pessoa2.myFunc()
