@@ -86,3 +86,24 @@ def repetirRecursive(n):
         repetirRecursive(n-1)
 
 repetirRecursive(5)
+
+# Funções lambda
+# é uma função anonima que pode receber infinitos argumentos mas so retorna um resultado.
+x = lambda a : a + 10
+
+# Metodo de uso
+result = x(5)
+print(result)
+
+# As expressoes lambda recebem qualquer numero de argumento so precisam se encontrar antes do dois pontos:
+
+y = lambda a, b : a * b
+print(y(5,2))
+
+# Criando uma função que sempre duplica numeros que enviamos:
+def myFunct(n):
+    return lambda a: a * n
+
+meuDuplicador = myFunct(2)
+
+print(meuDuplicador(11))
