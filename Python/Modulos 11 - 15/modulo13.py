@@ -132,4 +132,28 @@ class Estudante(Heranca):
 p2 = Estudante("Arthur", 17)
 # Principal intuito da herança é tornar reaproveitavel um código, e tornar mais facil desenvolver alguns sistemas como o de cadastro por exemplo.
 p2.imprimeDados()
+# Como Add metodos e proprieadades na nossa nossa função herdada:
+class Heranca:
+    def __init__(self, _nome, _idade) -> None:
+        self.nome = _nome
+        self.idade = _idade
 
+    def imprimeDados(self):
+        print("Sou ", self.nome, "E tenho ", self.idade)
+
+p1 = Heranca("Gabriel", 22)
+p1.imprimeDados()
+
+class Estudante(Heranca):
+    def __init__(self, _nome, _idade, _anoGrad) -> None: 
+            super().__init__(_nome, _idade)
+            self.anoGrad = _anoGrad # Add uma nova propriedade
+# Add Metodos na nossa classe
+    def bemVindo(self):
+        print("Bem vindo ", self.nome, 'ao ano', self.anoGrad)
+
+x = Estudante("Flavio", 21, 1999)
+x.imprimeDados()
+# Referenciando a função.
+x.bemVindo()
+     
