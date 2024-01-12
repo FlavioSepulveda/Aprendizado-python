@@ -107,3 +107,23 @@ print("Idade: ", p1.idade)
 # print(p1)
 # del p1
 # print(p1) # Gera um erro pq o objeto não existe mais
+
+# Herança - A classe main/pai/base >> A classe filha/derivada
+class Heranca:
+    def __init__(self, _nome, _idade) -> None:
+        self.nome = _nome
+        self.idade = _idade
+
+    def imprimeDados(self):
+        print("Sou ", self.nome, "E tenho ", self.idade)
+
+p1 = Heranca("Gabriel", 22)
+p1.imprimeDados()
+
+# Para criar a herança precisamos criar a classe e passar a main como parametro da classe;
+class Estudante(Heranca):
+    pass
+
+p2.Estudante("Arthur", 17)
+# Principal intuito da herança é tornar reaproveitavel um código, e tornar mais facil desenvolver alguns sistemas como o de cadastro por exemplo.
+
