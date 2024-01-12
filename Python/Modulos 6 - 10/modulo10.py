@@ -70,3 +70,19 @@ minhaFuncao(frutas)
 def miFuc():
     pass # Evitando erro de sintaxe.
 print('Fim da execução.')    
+
+# Função recursiva
+# Quando uma função chama por ela mesma dentro de si:
+# Sem recursividade
+def repetir(n):
+    for x in range(n):
+        print('Ola, mundo.')
+
+repetir(4)
+# Com recursividade:
+def repetirRecursive(n):
+    if n > 0:
+        print('Ola mundo.')
+        repetirRecursive(n-1)
+
+repetirRecursive(5)
