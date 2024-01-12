@@ -65,3 +65,8 @@ def minhaFuncao(alimentos):
 frutas = ['Maçã', 'Banana', 'Abacaxi']
 # A lista pode ser repassada de forma literal tambem.
 minhaFuncao(frutas)
+# Utilização da Declaração de passagem numa função:
+
+def miFuc():
+    pass # Evitando erro de sintaxe.
+print('Fim da execução.')    
