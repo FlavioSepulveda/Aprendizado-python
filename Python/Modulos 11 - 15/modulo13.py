@@ -64,3 +64,25 @@ class Exemplo:
 
 pessoa3 = Exemplo("2","4")
 pessoa3.idade()
+
+# Declaração de passagem - evita erros de sintaxe
+
+# class Passagem:
+#     def __init__(self) -> None:
+#         pass
+
+# Modificando propriedades de um objeto.
+
+class Pessoa:
+    def __init__(self, nome, idade) -> None:
+        self.nome = nome
+        self.idade = idade
+    def firstFunc(self):
+        print("Ola meu nome é: ", self.nome)
+
+
+# para mudar o valor de uma variavel do objeto usamos o operador de atribuição
+p1 = Pessoa("Gabriel", 21)
+p1.firstFunc()
+p1.nome = "Lucas"
+p1.firstFunc()
