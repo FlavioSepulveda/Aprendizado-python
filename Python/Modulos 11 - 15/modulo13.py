@@ -86,3 +86,24 @@ p1 = Pessoa("Gabriel", 21)
 p1.firstFunc()
 p1.nome = "Lucas"
 p1.firstFunc()
+
+# Excluindo propriedades de um objeto, ou um objeto inteiro:
+class Pessoa1:
+    def __init__(self, nnome, iidade) -> None:
+        self.nome = nnome
+        self.idade = iidade
+    def firstFunc(self):
+        print("Ola meu nome é: ", self.nome)
+
+p1 = Pessoa1("Gabriel", 21)
+print("Nome: ", p1.nome)
+print("Idade: ", p1.idade)
+# Excluimos com o metodo del
+# del p1.idade
+# print("Nome: ", p1.nome)
+# print("Idade: ", p1.idade) # Ira gerar um erro por tentar referenciar a idade.
+
+# Buscando o objeto e deletando ele
+# print(p1)
+# del p1
+# print(p1) # Gera um erro pq o objeto não existe mais
