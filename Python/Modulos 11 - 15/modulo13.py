@@ -121,9 +121,15 @@ p1 = Heranca("Gabriel", 22)
 p1.imprimeDados()
 
 # Para criar a herança precisamos criar a classe e passar a main como parametro da classe;
+# A função init na classe derivada
 class Estudante(Heranca):
-    pass
+    def __init__(self, _nome, _idade) -> None: # Quando colocamos essa função dentro de uma função derivada ela sobrescreve a anterior.
+        # Pessoa.__init__(self, _nome, _idade) # Aqui defino oque ele faz referenciando a classe main.
+        # A função super faz com que a herança seja a mesma da main.
+        super().__init__(_nome, _idade)
+        pass
 
-p2.Estudante("Arthur", 17)
+p2 = Estudante("Arthur", 17)
 # Principal intuito da herança é tornar reaproveitavel um código, e tornar mais facil desenvolver alguns sistemas como o de cadastro por exemplo.
+p2.imprimeDados()
 
