@@ -26,3 +26,22 @@ print(next(myInt2))
 # Um método for cria algo semelhante a um iterator 
 for x in myTuple:
     print(x)
+
+# Criando um interador que aumenta em um
+    
+class MeusNumeros:
+    def __iter__(self):
+        self.a = 1
+        return self
+    def __next__(self):
+        x = self.a
+        self.a += 1
+        return x
+    
+myClass = MeusNumeros()
+myIter = iter(myClass)
+
+print(next(myIter))
+print(next(myIter))
+print(next(myIter))
+print(next(myIter))
