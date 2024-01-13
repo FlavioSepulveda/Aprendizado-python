@@ -34,14 +34,17 @@ class MeusNumeros:
         self.a = 1
         return self
     def __next__(self):
-        x = self.a
-        self.a += 1
-        return x
+        # Fazendo o interador parar:
+        if self.a <= 20:
+            x = self.a
+            self.a += 1
+            return x
+        else:
+            # Pedindo a ele para parar.
+            raise StopIteration
     
 myClass = MeusNumeros()
 myIter = iter(myClass)
 
-print(next(myIter))
-print(next(myIter))
-print(next(myIter))
-print(next(myIter))
+for x in myClass:
+    print(x)
