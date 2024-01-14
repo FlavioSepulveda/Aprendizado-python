@@ -11,5 +11,17 @@ a = [7,15,25,32,4,18]
 y = min(a)
 print(y)
 # Função max retorna o valor maximo
-print(max(x))
-print(max(y))
+x = max(5, 10, 52, 89,100)
+y = max([7,15,25,32,4,18])
+print(x)
+print(y)
+
+# Função que retorna valores absolutos 
+#  A função abs retorna o valor absoludo de um numero
+
+x = abs(-7.25)
+print(x)
+
+# método pow
+x = pow(4, 3) # mesmo que dizer 4 elevado a 3
+print(x)
