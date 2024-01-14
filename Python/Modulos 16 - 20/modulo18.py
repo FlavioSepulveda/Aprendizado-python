@@ -1,5 +1,5 @@
 # MODULO 18 - Matemática em Python
-
+import math as mp
 # O conjunto de funções matematicas do python
 # Funções min e max
 # Função min retorna o valor minimo
@@ -24,4 +24,24 @@ print(x)
 
 # método pow
 x = pow(4, 3) # mesmo que dizer 4 elevado a 3
+print(x)
+# Modulo matematico
+
+# Pegando os metodos do modulo:
+x = dir(mp)
+print(x)
+# Rais quadrada
+raiz_quadrada = mp.sqrt(49)
+print(raiz_quadrada)
+
+# Arredondando valores pra cima
+arredonde = mp.ceil(1.4)
+print(arredonde)
+
+# Arredondando valores pra baixo
+arredonde2 = mp.floor(1.4)
+print(arredonde2)
+
+# Constantes matematicas
+x = mp.pi
 print(x)
