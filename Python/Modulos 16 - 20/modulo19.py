@@ -32,3 +32,23 @@ print(json.dumps(31.76))
 print(json.dumps(True))
 print(json.dumps(False))
 print(json.dumps(None))
+# Formatando resultado json em python
+# O metodo dumps tem parametros de formatação.
+usuario = {
+    "Nome": "Antonio Flavio",
+    "Idade": 21,
+    "Casado": False,
+    "Divorciado": False,
+    "Filhos": False,
+    "Pets": 3,
+    "Livros Favoritos": [
+        {"Autor": "Tappei Nagatsuki", "Obra": "Re: Zero"},
+        {"Autor": "Arthur Conan Doyle", "Obra": "Sherlock Holmes"}
+    ]
+}
+# Parametro de identação
+# cont = json.dumps(usuario, indent= 4, separators=(". ", " = "), sort_keys= True)
+cont = json.dumps(usuario, separators=(". ", " = "), sort_keys= True)
+print(cont)
+
+
