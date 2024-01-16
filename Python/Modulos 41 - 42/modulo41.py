@@ -1,2 +1,2 @@
-# MODULO 41 - Módulo SciPy (Scientific Python)
+# MODULO 41 - Módulo SciPy (Scientific Python).
 
