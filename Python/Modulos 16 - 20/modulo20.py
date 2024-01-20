@@ -37,3 +37,17 @@ x = re.search("Brasil", txt3)
 print(x)
 # Método Search - Pesquise("Correspondencia", String)
 
+# Função findall - Ela retorna uma lista com todas as correspodencias encontradas dentro de uma string.
+txt4 = 'O calor do motor da moto'
+
+# Este metodo retorna um objeto que guadamos numa variavel que nesse caso é y
+y = re.findall("or", txt4)
+
+print(y) # Retornará uma lista com todas as correspondencias.
+# Se nenhumma for encontrada ele retorna uma lista vazia... Por Exemplo
+z = re.findall("ar", txt4)
+# print(z)
+if z:
+    print("Sim existe correspondencia.")
+else:
+    print("Não existe correspondencia.")
