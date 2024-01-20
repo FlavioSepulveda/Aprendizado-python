@@ -1,38 +1,27 @@
 # MODULO 19 - RegEx (Expressões Regulares) em Python
-# Serve para verificar a String contem um formato de pesquisa especifico.
+'''
+    Os RegEx são expressões que permitem a localização de padrões de pesquisa dentro de strings codigos ou afins, servindo tambem para validação de emails, numeros telefonicos e numeros de cpf, as regex tambem conhecidas como Expressões regulares, em python são trabalhadas com a utilização da biblioteca RE.
+'''
+# Importando módulo nescessario.
 import re
 
-txt = "O seu nome é Flávio"
+txt = "O Gabriel amigo do Miguel"
 
-# Verificar se uma string começa com 'é' e termina com "Flavio"
-x = re.search("^O.*Flávio.$", txt)
-if x:
-    print("Sim encontramos.")
+# Verificando se a string começa com O e termina com migel.
+# Método search
+
+encontre = re.search("^O.*Miguel$", txt)
+# print(encontre)
+# Verificando se essa correspondencia existe dentro de um if
+if encontre:
+    print('Foi encontrada uma correspondencia.')
 else:
-    print("Nenhuma encontrada.")
-
-# Expressoes regulares em uma string - Search();
-
-texto = "O calor do motor da moto"
-
-var1 = re.search("\s", texto)
-
-print(var1)
-print("O primeiro espaço em branco esta em: ", var1.start())
-var1 = re.search("Brasil", texto)
-print(var1)
-
-# Função findall()
-# Retorna todas as correspondencias em uma lista.
-
-txt1 = "O calor do motor da moto"
-
-x = re.findall("or", txt1)
-print(x)
-if x:
-    print('Foram encontradas 2 correspondencias.')
+    print('Nenhuma correspondencia foi encontrada.')
+    
+# Exemplo 2 - Método search.
+txt2 = "A Gabriela é amiga de Miguel?"
+encontre = re.search("Õ.*Miguel$", txt) # Neste caso o retorno é negativo para o inicio e para o fim da string.
+if encontre:
+    print('Sim, Encontrei uma sequencia equivalente.')
 else:
-    print("Nenhuma combinação encontrada.")
-
-# x = re.findall("Brasil", txt1) # retorna uma lista vazia
-print(x)
+    print('Não, não existe correspondencia alguma.')
