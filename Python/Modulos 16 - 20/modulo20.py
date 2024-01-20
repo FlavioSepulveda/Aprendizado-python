@@ -89,6 +89,7 @@ exemplo2 = "Eu tenho 22 anos."
 exemplo3 = "Ola mundo."
 exemplo3 = "O calor do motor da Moto."
 exemplo4 = "O calor do motor da Moto."
+exemplo5 = "Tem mais de 8000."
 
 # Os caracteres são:
 '''
@@ -97,7 +98,8 @@ exemplo4 = "O calor do motor da Moto."
     . - O ponto ele representa qualquer caractere exceto uma nova linha
     "[^arm]" - Este caractere indica inicio/Começa com...
     [0123] - Retorna uma correspondencia onde qualquer um dos digitos especificados (0, 1, 2 ou 3) estão presentes.
-    
+    [0-9] - Retorna todos os valores correspondentes entre 0 e/ate 9.
+    [0-5][0-9] - Retorna qualquer correspondencia para numeros de dois digitos de 00 a 59.
 '''
 colchetes = re.findall("[a-z]", exemplo)
 print(colchetes)
@@ -105,15 +107,31 @@ barraInvertida = re.findall("\d",exemplo2)
 print(barraInvertida)
 pontoFinal = re.findall("mu..o", exemplo3)
 print(pontoFinal)
+
 circunflexo = re.findall("[^arm]", exemplo3)
 # print(circunflexo)
 if circunflexo:
     print('Sim existe pelo menos uma correspondencia.')
 else:
     print('Não não existem correspondencias para a busca')
+    
 digitos = re.findall("[0123]", exemplo4)
 print(digitos)
 if digitos:
+    print('Sim existe pelo menos uma correspondencia.')
+else:
+    print('Não não existem correspondencias para a busca')
+
+digitos09 = re.findall("[0-9]", exemplo5)
+print(digitos09)
+if digitos09:
+    print('Sim existe pelo menos uma correspondencia.')
+else:
+    print('Não não existem correspondencias para a busca')
+    
+doisDigitos = re.findall("[0-5][0-9]", exemplo5)
+print(doisDigitos)
+if doisDigitos:
     print('Sim existe pelo menos uma correspondencia.')
 else:
     print('Não não existem correspondencias para a busca')
