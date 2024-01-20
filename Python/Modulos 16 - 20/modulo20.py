@@ -51,3 +51,12 @@ if z:
     print("Sim existe correspondencia.")
 else:
     print("Não existe correspondencia.")
+    
+# Função split - Retorna uma lista onde a string foi dividida em cada correspondencia encontrada.
+
+txt5 = "O calor do motor da moto"
+
+corr = re.split("\s",txt5) # Ao colocarmos um 3° parametro, numerico ele ira separar de acordo com a quantidade de ocorrencias.
+print(corr)
+
+# 
