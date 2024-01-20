@@ -68,3 +68,15 @@ txt6 = "O calor do motor da moto"
 # Usando o Count - é o numero especificado no ultimo parametro.
 cor = re.sub("\s", ".", txt6, 2)
 print(cor)
+
+# Objetos de correspondencias;
+txt7 = "O calor do motor da Moto."
+# Correspondence objects - São objetos que guardam os dados referentes as correspondencias do modulo re.
+# Or = re.search("or", txt7)
+# print(Or)
+# A correspondencia do objeto a cima. <re.Match object; span=(5, 7), match='or'>.
+Correspondencia = re.search(r"\bM\w+", txt7) # Ele esta procurando a letra maiuscula.
+print(Correspondencia)
+print(Correspondencia.span())
+print(Correspondencia.string)
+print(Correspondencia.group())
