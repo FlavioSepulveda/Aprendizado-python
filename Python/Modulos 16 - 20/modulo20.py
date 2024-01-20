@@ -20,8 +20,20 @@ else:
     
 # Exemplo 2 - Método search.
 txt2 = "A Gabriela é amiga de Miguel?"
-encontre = re.search("Õ.*Miguel$", txt) # Neste caso o retorno é negativo para o inicio e para o fim da string.
+encontre = re.search("^O.*Miguel$", txt) # Neste caso o retorno é negativo para o inicio e para o fim da string.
 if encontre:
     print('Sim, Encontrei uma sequencia equivalente.')
 else:
     print('Não, não existe correspondencia alguma.')
+    
+# A função search busca uma correspondencia dentro de um objeto especifico, se houver mais de uma correspondencia ela retorna apenas a primeira a ser encontrada.
+
+txt3 = "O calor do motor da moto."
+x = re.search("\s", txt3)
+# O "\s" localiza espaços em branco dentro da string.
+print(f'O primeiro espaço em branco esta na posição: {x.start()}')
+# Buscando o nome brasil dentro da string:
+x = re.search("Brasil", txt3)
+print(x)
+# Método Search - Pesquise("Correspondencia", String)
+
