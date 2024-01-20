@@ -90,6 +90,7 @@ exemplo3 = "Ola mundo."
 exemplo3 = "O calor do motor da Moto."
 exemplo4 = "O calor do motor da Moto."
 exemplo5 = "Tem mais de 8000."
+exemplo6 = "8 Vezes antes de 11h e 45min."
 
 # Os caracteres são:
 '''
@@ -100,6 +101,8 @@ exemplo5 = "Tem mais de 8000."
     [0123] - Retorna uma correspondencia onde qualquer um dos digitos especificados (0, 1, 2 ou 3) estão presentes.
     [0-9] - Retorna todos os valores correspondentes entre 0 e/ate 9.
     [0-5][0-9] - Retorna qualquer correspondencia para numeros de dois digitos de 00 a 59.
+    [a-zA-Z] - Retorna qualquer correspondencia dentre a e z maiusculas e minusculas.
+    [+] - Em conjuntos, +, *, ., |, (), $, {} não tem nenhum significado especial, entao [+] significa: retorna correspondencia para qualquer caractere + na string. 
 '''
 colchetes = re.findall("[a-z]", exemplo)
 print(colchetes)
@@ -135,3 +138,13 @@ if doisDigitos:
     print('Sim existe pelo menos uma correspondencia.')
 else:
     print('Não não existem correspondencias para a busca')
+    
+aez = re.findall("[a-zA-Z]", exemplo6)
+print(aez)
+sinalDeSoma = re.findall("[+]", exemplo6)
+print(sinalDeSoma)
+if sinalDeSoma:
+    print('Sim existe pelo menos uma correspondencia.')
+else:
+    print('Não não existem correspondencias para a busca')
+    
