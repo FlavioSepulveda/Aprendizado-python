@@ -87,12 +87,17 @@ txt8 = "O calor do mootor da Moto."
 exemplo = "O calor do motor da moto"
 exemplo2 = "Eu tenho 22 anos."
 exemplo3 = "Ola mundo."
+exemplo3 = "O calor do motor da Moto."
+exemplo4 = "O calor do motor da Moto."
 
 # Os caracteres são:
 '''
     [] - Representam os conjuntos a serem pesquisados. "[a-z]" Representa a busca por caracteres de A a Z minusculos.
     \ - A barra invertida sinaliza uma busca por uma sequencia especial(e tambem é um caractere de escape) "\d"
     . - O ponto ele representa qualquer caractere exceto uma nova linha
+    "[^arm]" - Este caractere indica inicio/Começa com...
+    [0123] - Retorna uma correspondencia onde qualquer um dos digitos especificados (0, 1, 2 ou 3) estão presentes.
+    
 '''
 colchetes = re.findall("[a-z]", exemplo)
 print(colchetes)
@@ -100,3 +105,15 @@ barraInvertida = re.findall("\d",exemplo2)
 print(barraInvertida)
 pontoFinal = re.findall("mu..o", exemplo3)
 print(pontoFinal)
+circunflexo = re.findall("[^arm]", exemplo3)
+# print(circunflexo)
+if circunflexo:
+    print('Sim existe pelo menos uma correspondencia.')
+else:
+    print('Não não existem correspondencias para a busca')
+digitos = re.findall("[0123]", exemplo4)
+print(digitos)
+if digitos:
+    print('Sim existe pelo menos uma correspondencia.')
+else:
+    print('Não não existem correspondencias para a busca')
