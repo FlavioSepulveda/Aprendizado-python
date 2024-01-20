@@ -59,4 +59,12 @@ txt5 = "O calor do motor da moto"
 corr = re.split("\s",txt5) # Ao colocarmos um 3° parametro, numerico ele ira separar de acordo com a quantidade de ocorrencias.
 print(corr)
 
-# 
+# Função Sub;
+# Esta função substitui cada correspondencia por algo de sua escolha.
+
+txt6 = "O calor do motor da moto"
+
+# cor = re.sub("\s", ".", txt6)
+# Usando o Count - é o numero especificado no ultimo parametro.
+cor = re.sub("\s", ".", txt6, 2)
+print(cor)
