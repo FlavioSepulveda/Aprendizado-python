@@ -21,7 +21,9 @@ except:
     print('Significo exceção')
 else:
     print('Tudo certo por aqui.')
-
+finally:
+    print('O try except foi finalizado.')
+# o finally executa dequalquer forma dentro do bloco de codigos
 
 # Os except são executados para erros em especifico, mas podemos usar um else pra executar algo fora do try.
 
