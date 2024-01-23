@@ -67,27 +67,36 @@ m_cursor = mydb.cursor()
 #         NULL, 'Gabriel', 'Araujo', '12'
 #     )
 # """
-sql = """
-    INSERT INTO pessoas(
-        id, nome, sobrenome, idade
-    )
-    VALUES (
-        NULL, %s, %s, %s
-    )
-"""
+# sql = """
+#     INSERT INTO pessoas(
+#         id, nome, sobrenome, idade
+#     )
+#     VALUES (
+#         NULL, %s, %s, %s
+#     )
+# """
 
 # val = ("Danny", "Logan", "35")
-val1 = [
-    ("Flavio", "Sepulveda", "21"), 
-    ("Ricardo", "Flavio", "17"), 
-    ("João", "Paulo", "24")
-    ]
+# val1 = [
+#     ("Flavio", "Sepulveda", "21"), 
+#     ("Ricardo", "Flavio", "17"), 
+#     ("João", "Paulo", "24")
+#     ]
 
 # m_cursor.execute(sql, val1)
-m_cursor.executemany(sql, val1)
+# m_cursor.executemany(sql, val1)
 
-mydb.commit()
+# mydb.commit()
 
-print(m_cursor.rowcount, "Registros inseridos")
-#  Obtendo o ide do ultimo item inserido
-print(m_cursor.lastrowid)
+# print(m_cursor.rowcount, "Registros inseridos")
+# #  Obtendo o ide do ultimo item inserido
+# print(m_cursor.lastrowid)
+
+# Acessando dados dentro de uma tabela.
+sql = "SELECT nome FROM pessoas"
+m_cursor.execute(sql)
+myresult = m_cursor.fetchall() # Ele retorna todos
+# myresult = m_cursor.fetchone()
+# print(myresult)
+for x in myresult:
+    print(x)
