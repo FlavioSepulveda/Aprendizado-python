@@ -44,7 +44,18 @@ m_cursor = mydb.cursor()
 #     sobrenome VARCHAR(255)
 # Removendo tabelas 
 # sql = "ALTER TABLE pessoas DROP sobrenome"
-sql = "ALTER TABLE pessoas ADD sobrenome VARCHAR(255) AFTER nome"
+# sql = "ALTER TABLE pessoas ADD sobrenome VARCHAR(255) AFTER nome"
 
+# Chave primaria - serve para termo registros de valor unico para cada campo
+# sql = """
+#     CREATE TABLE pessoas(
+#         id INT AUTO_INCREMENT PRIMARY KEY
+#         nome VARCHAR(255)
+#         idade(2)
+#     )
+# """
+sql = """
+    ALTER TABLE pessoas ADD id INT AUTO_INCREMENT PRIMARY KEY FIRST
+"""
 
 m_cursor.execute(sql)
