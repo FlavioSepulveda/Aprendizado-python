@@ -1,5 +1,7 @@
 # MODULO 23 - Manipular arquivo (Criação, Leitura e Escrita)
 # 
+import os
+import shutil
 # open("Nome do Arquivo", "Modo")
 
 # MODOS -
@@ -39,10 +41,28 @@ f = open("Ola, mundo.txt", "a")
 f.write("\nAdicionando conteudo ao arquivo.")
 f.close()
 
-# f=open("Ola, mundo.txt", "r")
-# print(f.read())
-# f.close()
+# f=open("GameDesingDocument - 1. docx", "x")
+f.close()
 # "w" - Reescrevendo o arquivo
 f=open("Ola, mundo.txt", "w")
 f.write("Reescrevendo o conteudo.")
 f.close()
+
+# Excluindo arquivos com os 
+
+# Verifiacando primeiro se o arquivo existe;
+if os.path.exists("GameDesingDocument - 1. docx"):
+    os.remove("GameDesingDocument - 1. docx")
+    print("O arquivo Foi removido.")
+else: 
+    print("O arquivo não existe.")
+    
+# Removendo uma pasta é com o removedir
+if os.path.exists("Rmdir"):
+    os.rmdir("Rmdir")
+    # Ele so remove pastas vazias, se tiver conteudo ele não irá remover.
+    # pra remover usamos o shutil com o metodo shutil.rmtree("Nome da pasta")
+    print("O diretorio foi eliminado.")
+else: 
+    print("O diretorio não existe.")
+    
