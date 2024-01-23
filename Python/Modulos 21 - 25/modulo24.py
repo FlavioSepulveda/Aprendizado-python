@@ -32,6 +32,19 @@ m_cursor = mydb.cursor()
 
 # m_cursor.execute(sql)
 # Acessando as tabelas de dados:
-m_cursor.execute('SHOW TABLES')
-for x in m_cursor:
-    print(x)
+# m_cursor.execute('SHOW TABLES')
+# for x in m_cursor:
+#     print(x)
+
+# Alterando as estruturas das tabelas:
+
+
+# sql = """
+#     ALTER TABLE pessoas ADD
+#     sobrenome VARCHAR(255)
+# Removendo tabelas 
+# sql = "ALTER TABLE pessoas DROP sobrenome"
+sql = "ALTER TABLE pessoas ADD sobrenome VARCHAR(255) AFTER nome"
+
+
+m_cursor.execute(sql)
