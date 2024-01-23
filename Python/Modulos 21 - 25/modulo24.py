@@ -54,8 +54,40 @@ m_cursor = mydb.cursor()
 #         idade(2)
 #     )
 # """
+# sql = """
+#     ALTER TABLE pessoas ADD id INT AUTO_INCREMENT PRIMARY KEY FIRST
+# """
+
+# Para inserir dados dentro da tabela;
+# sql = """
+#     INSERT INTO pessoas(
+#         id, nome, sobrenome, idade
+#     )
+#     VALUES (
+#         NULL, 'Gabriel', 'Araujo', '12'
+#     )
+# """
 sql = """
-    ALTER TABLE pessoas ADD id INT AUTO_INCREMENT PRIMARY KEY FIRST
+    INSERT INTO pessoas(
+        id, nome, sobrenome, idade
+    )
+    VALUES (
+        NULL, %s, %s, %s
+    )
 """
 
-m_cursor.execute(sql)
+# val = ("Danny", "Logan", "35")
+val1 = [
+    ("Flavio", "Sepulveda", "21"), 
+    ("Ricardo", "Flavio", "17"), 
+    ("João", "Paulo", "24")
+    ]
+
+# m_cursor.execute(sql, val1)
+m_cursor.executemany(sql, val1)
+
+mydb.commit()
+
+print(m_cursor.rowcount, "Registros inseridos")
+#  Obtendo o ide do ultimo item inserido
+print(m_cursor.lastrowid)
