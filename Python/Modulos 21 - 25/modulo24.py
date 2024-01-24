@@ -136,3 +136,48 @@ m_cursor = mydb.cursor()
 
 # Se ele não encontrar tabela com esse nome ele retorna um erro.
 
+# Atualizando registros de tabelas:
+
+# Criando a tabela
+# sql1 = """
+#     CREATE TABLE pessoas(nome VARCHAR(225),sobrenome VARCHAR(225), idade INT(2))
+# """
+
+# m_cursor.execute(sql1)
+# sql = """
+#     ALTER TABLE pessoas ADD id INT AUTO_INCREMENT PRIMARY KEY FIRST
+# """
+# m_cursor.execute(sql)
+
+# sql2 = """
+#     INSERT INTO pessoas(
+#         id, nome, sobrenome, idade
+#     )
+#     VALUES (
+#         NULL, %s, %s, %s
+#     )
+# """
+# valores= [
+#     ('Gabriel','Felipe', '12'),
+#     ('Antonio', 'Flavio', '21'),
+#     ('Ricardo', 'Flavio', '17'),
+#     ('Pedro', 'Antonio', '21')
+# ]
+# m_cursor.executemany(sql2, valores)
+# mydb.commit()
+
+# sql = "UPDATE pessoas SET nome = %s WHERE id= %s"
+# us = ('Luis', '1')
+# m_cursor.execute(sql, us)
+# mydb.commit()
+# print(m_cursor.rowcount, "Registro(s) afetado(s)")
+
+# Organização de registros:
+# sql = "SELECT * FROM pessoas LIMIT 3"
+sql = "SELECT * FROM pessoas LIMIT 3 OFFSET 2"
+
+m_cursor.execute(sql)
+myResult = m_cursor.fetchall()
+
+for x in myResult:
+    print(x)
