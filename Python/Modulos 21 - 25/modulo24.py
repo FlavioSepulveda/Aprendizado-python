@@ -108,12 +108,31 @@ m_cursor = mydb.cursor()
 #     print(x)
 
 # Ordenando por ordem crescente
-sql = "SELECT * FROM pessoas ORDER BY nome DESC"
-'''
-    Por padrão a ordem vem ASC (ascendente), mas podemos colocar DESC (descendente).
-'''
-m_cursor.execute(sql)
-myresult = m_cursor.fetchall()
+# sql = "SELECT * FROM pessoas ORDER BY nome DESC"
+# '''
+#     Por padrão a ordem vem ASC (ascendente), mas podemos colocar DESC (descendente).
+# '''
+# m_cursor.execute(sql)
+# myresult = m_cursor.fetchall()
 
-for x in myresult:
-    print(x)
+# for x in myresult:
+#     print(x)
+
+# Apagando registros da tabela
+# sql = "DELETE FROM pessoas WHERE idade = %s"
+# sql = "DELETE FROM pessoas WHERE sobrenome = %s"
+# sobrenome = ('Logan',)
+'''
+    Usamos o id para não apagar o arquivo errado.
+'''
+
+# m_cursor.execute(sql, sobrenome) 
+# mydb.commit()
+# print(m_cursor.rowcount)
+
+# Excluindo tabela dentro do nosso data base.
+# sql = "DROP TABLE pessoas"
+# m_cursor.execute(sql)
+
+# Se ele não encontrar tabela com esse nome ele retorna um erro.
+
