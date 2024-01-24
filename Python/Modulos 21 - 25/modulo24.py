@@ -174,10 +174,63 @@ m_cursor = mydb.cursor()
 
 # Organização de registros:
 # sql = "SELECT * FROM pessoas LIMIT 3"
-sql = "SELECT * FROM pessoas LIMIT 3 OFFSET 2"
+# sql = "SELECT * FROM pessoas LIMIT 3 OFFSET 2"
 
-m_cursor.execute(sql)
-myResult = m_cursor.fetchall()
+# m_cursor.execute(sql)
+# myResult = m_cursor.fetchall()
 
-for x in myResult:
-    print(x)
+# for x in myResult:
+#     print(x)
+
+# Criando tabelas de usuarios e livros
+
+# Criando tabela de usuarios:
+# sql_command_1 = """
+#     CREATE TABLE User(id INT AUTO_INCREMENT PRIMARY KEY, apelido VARCHAR(225),fav VARCHAR(225), idade INT(2))
+# """
+# # Criando tabela de livros
+# sql_command_2 = """
+#     CREATE TABLE Livros(id INT AUTO_INCREMENT PRIMARY KEY, Titulo VARCHAR(255), Class VARCHAR(255))
+# """
+
+# # Dando comando para as duas tabelas serem geradas.
+# m_cursor.execute(sql_command_1)
+
+# m_cursor.execute(sql_command_2)
+
+# Colocando usuarios na tabela de usuarios;
+sql_command_insert_1 = """
+    INSERT INTO User(
+        id, apelido, fav, idade
+    )
+    VALUES (
+        NULL, %s, %s, %s
+    )
+"""
+valUser = [
+    ('Usuario1', 'Livro1','20'),
+    ('Usuario2', 'Livro3','18'),
+    ('Usuario3', 'Livro2','19'),
+    ('Usuario4', 'Livro4','17'),
+    ('Usuario5', 'Livro5','21')
+]
+# Adcionando na tabela:
+m_cursor.executemany(sql_command_insert_1, valUser)
+# colocando itens na tabela de livros:
+sql_command_insert_2 = """
+    INSERT INTO Livros(
+        id, Titulo, Class
+    )
+    VALUES(
+        NULL, %s, %s
+    )
+"""
+valLivros = [
+    ('Livro 1', 'Livre'),
+    ('Livro 2', 'Romance'),
+    ('Livro 3', 'Comedia romantica'),
+    ('Livro 4', 'Comedia'),
+    ('Livro 5', 'Terror')
+]
+# Colocando na tabela os itens 
+m_cursor.executemany(sql_command_insert_2, valLivros)
