@@ -93,10 +93,27 @@ m_cursor = mydb.cursor()
 # print(m_cursor.lastrowid)
 
 # Acessando dados dentro de uma tabela.
-sql = "SELECT nome FROM pessoas"
+# sql = "SELECT * FROM pessoas WHERE sobrenome = 'Logan'"
+# sql = "SELECT * FROM pessoas WHERE id = '3'"
+# sql = "SELECT * FROM pessoas WHERE idade = '30'"
+# sql = "SELECT * FROM pessoas WHERE sobrenome LIKE '%ga%'" # Procura silabas
+# Como evitar injeção de SQL
+# sql = "SELECT * FROM pessoas WHERE sobrenome = %s"
+# sobrenome = ('Logan',)
+# m_cursor.execute(sql, sobrenome)
+# myresult = m_cursor.fetchall() # Ele retorna todos
+# # myresult = m_cursor.fetchone()
+# # print(myresult)
+# for x in myresult:
+#     print(x)
+
+# Ordenando por ordem crescente
+sql = "SELECT * FROM pessoas ORDER BY nome DESC"
+'''
+    Por padrão a ordem vem ASC (ascendente), mas podemos colocar DESC (descendente).
+'''
 m_cursor.execute(sql)
-myresult = m_cursor.fetchall() # Ele retorna todos
-# myresult = m_cursor.fetchone()
-# print(myresult)
+myresult = m_cursor.fetchall()
+
 for x in myresult:
     print(x)
