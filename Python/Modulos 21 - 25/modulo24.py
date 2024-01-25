@@ -184,13 +184,13 @@ m_cursor = mydb.cursor()
 
 # Criando tabelas de usuarios e livros
 
-# Criando tabela de usuarios:
+# # Criando tabela de usuarios:
 # sql_command_1 = """
-#     CREATE TABLE User(id INT AUTO_INCREMENT PRIMARY KEY, apelido VARCHAR(225),fav VARCHAR(225), idade INT(2))
+#     CREATE TABLE User(Id INT AUTO_INCREMENT PRIMARY KEY, Apelido VARCHAR(225),Class VARCHAR(225), Idade INT(2))
 # """
 # # Criando tabela de livros
 # sql_command_2 = """
-#     CREATE TABLE Livros(id INT AUTO_INCREMENT PRIMARY KEY, Titulo VARCHAR(255), Class VARCHAR(255))
+#     CREATE TABLE Livros(Id INT AUTO_INCREMENT PRIMARY KEY, Titulo VARCHAR(255), Class VARCHAR(255))
 # """
 
 # # Dando comando para as duas tabelas serem geradas.
@@ -199,38 +199,55 @@ m_cursor = mydb.cursor()
 # m_cursor.execute(sql_command_2)
 
 # Colocando usuarios na tabela de usuarios;
-sql_command_insert_1 = """
-    INSERT INTO User(
-        id, apelido, fav, idade
-    )
-    VALUES (
-        NULL, %s, %s, %s
-    )
+# sql_command_insert_1 = """
+#     INSERT INTO User(
+#         Id, Apelido, Class, Idade
+#     )
+#     VALUES(
+#         NULL, %s, %s, %s
+#     )
+# """
+# valUser = [
+#     ('Usuario1', 'Livro1','20'),
+#     ('Usuario2', 'Livro3','18'),
+#     ('Usuario3', 'Livro2','19'),
+#     ('Usuario4', 'Livro4','17'),
+#     ('Usuario5', 'Livro5','21')
+# ]
+# # Adcionando na tabela:
+# # colocando itens na tabela de livros:
+# sql_command_insert_2 = """
+#     INSERT INTO Livros(
+#         Id, Titulo, Class
+#     )
+#     VALUES(
+#         NULL, %s, %s
+#     )
+# """
+# valLivros = [
+#     ('Livro 1', 'Livre'),
+#     ('Livro 2', 'Romance'),
+#     ('Livro 3', 'Comedia romantica'),
+#     ('Livro 4', 'Comedia'),
+#     ('Livro 5', 'Terror')
+# ]
+# # Colocando na tabela os itens 
+# m_cursor.executemany(sql_command_insert_1, valUser)
+# m_cursor.executemany(sql_command_insert_2, valLivros)
+# mydb.commit()
+
+
+
+# Unindo as tabelas 
+sql = """
+    SELECT
+        user.Apelido AS Apelido, livros.Class AS Class
+        FROM User 
+        INNER JOIN livros ON user.Class = livros.Titulo
 """
-valUser = [
-    ('Usuario1', 'Livro1','20'),
-    ('Usuario2', 'Livro3','18'),
-    ('Usuario3', 'Livro2','19'),
-    ('Usuario4', 'Livro4','17'),
-    ('Usuario5', 'Livro5','21')
-]
-# Adcionando na tabela:
-m_cursor.executemany(sql_command_insert_1, valUser)
-# colocando itens na tabela de livros:
-sql_command_insert_2 = """
-    INSERT INTO Livros(
-        id, Titulo, Class
-    )
-    VALUES(
-        NULL, %s, %s
-    )
-"""
-valLivros = [
-    ('Livro 1', 'Livre'),
-    ('Livro 2', 'Romance'),
-    ('Livro 3', 'Comedia romantica'),
-    ('Livro 4', 'Comedia'),
-    ('Livro 5', 'Terror')
-]
-# Colocando na tabela os itens 
-m_cursor.executemany(sql_command_insert_2, valLivros)
+m_cursor.execute(sql)
+myresult = m_cursor.fetchall()
+for x in myresult:
+    print(x)
+    
+print('Terminei.')
