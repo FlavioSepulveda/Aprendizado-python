@@ -1,1 +1,12 @@
 # MODULO 25 - Aplicações de Ambiente grafico(GUI) Tkinter Fundamentos
+# Importando o Tkinter
+import tkinter as tk
+
+# tk._test()
+# Criando uma instancia da classe que representa a janela principal
+# Root - representa o principio a rais
+root = tk.Tk()
+
+
+# Chamando o main loop
+root.mainloop()
