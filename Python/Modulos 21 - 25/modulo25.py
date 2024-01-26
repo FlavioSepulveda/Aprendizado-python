@@ -10,7 +10,7 @@ root = tk.Tk() # Inicia a tela
 # Classe label
 lbl = tk.Label(root, text="Ola mundo!") 
 # Métodos de posicionamento
-lbl.pack( )
+lbl.pack()
 
 # Chamando o main loop
 root.mainloop() # Mantem a tela do aplicativo aberta
