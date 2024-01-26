@@ -14,3 +14,5 @@ lbl.pack()
 
 # Chamando o main loop
 root.mainloop() # Mantem a tela do aplicativo aberta
+# Pequena mudança: 
+# Apartir daqui todos os arquivos python serãoo feitos em terminação .pyw, criando o habito de criar aplicações.
