@@ -16,8 +16,8 @@ titulo = root.title()
 largura_tela = root.winfo_screenwidth()
 altura_tela = root.winfo_screenheight()
 
-largura_janela = 300
-altura_janela = 200
+largura_janela = 700
+altura_janela = 500
 
 # Obtendo as dimensões da tela
 # Encontrando o ponto central-
