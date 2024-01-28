@@ -28,4 +28,18 @@ centro_y = int(altura_tela/2 - altura_janela/2)
 
 root.geometry(f"{largura_janela}x{altura_janela}+{centro_x}+{centro_y}")
 
+# O método resizable() permite ao usuário redimensionar a janela da aplicação.
+# Quando o parâmetro é 0 significa que a janela nao pode ser redimensionada.
+# Quando o parâmetro é 1 significa que a janela pode ser redimensionada.
+# root.resizable(0,0)
+# root.resizable(1,1)
+root.resizable(True, True)
+# Dentro do parâmetro os dois valores booleanos, indicam altura e largura.
+# root.resizable(True,True)
+# O tamanho da janela por padrão ja vem como 1, com isso podemos por meio dos metodos
+#minsize() e maxsize() delimitar um limite.
+root.minsize(300,200)
+root.maxsize(700,500)
+# Assim posso redimensionar do tamanho que eu quiser, mas sem ultrapassar esses limites.
+
 root.mainloop()
