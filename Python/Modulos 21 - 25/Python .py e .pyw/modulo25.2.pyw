@@ -42,4 +42,16 @@ root.minsize(300,200)
 root.maxsize(700,500)
 # Assim posso redimensionar do tamanho que eu quiser, mas sem ultrapassar esses limites.
 
+# Tipos de apresentação da aplicação - 
+# Apresentação maximizada 
+#root.state('zoomed')
+# Apresentação normal
+root.state('normal')
+# Apresentação minimizada 
+#root.state('iconic')
+
+# Para ver o codigo de resultado 
+print(root.state())
+root.title(root.state())
+
 root.mainloop()
