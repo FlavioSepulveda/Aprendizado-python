@@ -80,15 +80,30 @@ root.iconbitmap("arquivo-python.png")
 # lbl.pack()
 
 # Criando de uma maneira um pouco mais elaborada
-tk.Label(root, text='Exemplo 2').pack()
+# tk.Label(root, text='Exemplo 2').pack()
 
-# Usando o ttk
-ttk.Label(root, text='Exemplo 3').pack()
+# # Usando o ttk
+# ttk.Label(root, text='Exemplo 3').pack()
 
-# Widget de botão
-# Com o tkinter apenas
-tk.Button(root, text='Botão 1').pack()
-ttk.Button(root, text='Botão 2').pack()
+# # Widget de botão
+# # Com o tkinter apenas
+# tk.Button(root, text='Botão 1').pack()
+# ttk.Button(root, text='Botão 2').pack()
+
+# Definindo atributos
+ttk.Label(root, text='Ola mundo').pack()
+
+# Podemos fazer a atribuição por meio de indice com palavras chave
+lbl1 = ttk.Label(root)
+lbl1["text"] = "Outro ola mundo"
+lbl1.pack()
+
+# Mas tambem adcionar o atributo config
+lbl2 = ttk.Label(root)
+lbl2.config(text="Mais um ola mundo.")
+lbl2.pack()
+
+
 
 
 root.mainloop()
