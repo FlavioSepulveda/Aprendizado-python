@@ -110,7 +110,23 @@ lbl2.config(text="Mais um ola mundo.")
 lbl2.pack()
 
 # Criando o botão
+
 btn = ttk.Button(root, text='Ola', command=OlaMundo).pack()
+
+# Argumentos de comando
+# Primeiramente definimos uma função
+# Dentro dos parametros determinamos o argumento que a função ira receber
+def select(argumento):
+    root.config(background= argumento)
+
+# Usaremos uma função lambda pra chamar o evento
+# criando o botão;
+ttk.Button(
+    root,
+    text = "Mude a cor.",
+    command= lambda: select("red")
+).pack()
+# Agora o a função ira realizar o evento conforme a cor repassada pela sua variavel.
 
 
 root.mainloop()
