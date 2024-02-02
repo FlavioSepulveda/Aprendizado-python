@@ -3,6 +3,7 @@
     Arquivos terminados em ".pyw" são arquivos cujo NÃO existe uma necessidade do uso do console para executar.
 '''
 import tkinter as tk
+from tkinter import ttk
 
 root = tk.Tk()
 # Definindo o titulo da aplicação
@@ -58,17 +59,36 @@ root.title(root.state())
 root.attributes("-alpha", 1)
 # Ordem de empilhamento da janela.
 # Garante que a minha aplicação sempre esteja no topo ao se manusear outros aplicativos.
-# root.attributes("-topmost", 1)
+root.attributes("-topmost", 1)
 
 # Para mover uma janela para cima - Tras pro inicio da fila
 # root.lift()
 
 # Para mover a janela para baixo - Leva pro final da fila
-root.lower()
+# root.lower()
 
 # O topmost garante que ela sempre fique no topo.
 # Alterando o icone do arquivo
 # Deve ser no formato .ico
 root.iconbitmap("arquivo-python.png")
+# Widgets tematicos no tkinter
+
+# A biblioteca ttk é responsavel pela criação de widgets tematicos sempre que disponiveis. 
+
+# Criando uma label do jeito classico
+# lbl = tk.Label(root, text='Exemplo 1')
+# lbl.pack()
+
+# Criando de uma maneira um pouco mais elaborada
+tk.Label(root, text='Exemplo 2').pack()
+
+# Usando o ttk
+ttk.Label(root, text='Exemplo 3').pack()
+
+# Widget de botão
+# Com o tkinter apenas
+tk.Button(root, text='Botão 1').pack()
+ttk.Button(root, text='Botão 2').pack()
+
 
 root.mainloop()
