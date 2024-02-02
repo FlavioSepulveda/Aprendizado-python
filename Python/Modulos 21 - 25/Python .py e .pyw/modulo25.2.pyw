@@ -5,6 +5,12 @@
 import tkinter as tk
 from tkinter import ttk
 
+# Adcionando retorno ao botão
+def OlaMundo():
+    # Alem do nome da cor podemos colocar no formato hexadecimal
+    root.config(background='Pink')
+    print('Mudei a cor')
+    
 root = tk.Tk()
 # Definindo o titulo da aplicação
 root.title("App Test 01")
@@ -103,7 +109,8 @@ lbl2 = ttk.Label(root)
 lbl2.config(text="Mais um ola mundo.")
 lbl2.pack()
 
-
+# Criando o botão
+btn = ttk.Button(root, text='Ola', command=OlaMundo).pack()
 
 
 root.mainloop()
