@@ -39,7 +39,7 @@ root.resizable(True, True)
 # O tamanho da janela por padrão ja vem como 1, com isso podemos por meio dos metodos
 #minsize() e maxsize() delimitar um limite.
 root.minsize(300,200)
-root.maxsize(700,500)
+root.maxsize(700,500) 
 # Assim posso redimensionar do tamanho que eu quiser, mas sem ultrapassar esses limites.
 
 # Tipos de apresentação da aplicação - 
