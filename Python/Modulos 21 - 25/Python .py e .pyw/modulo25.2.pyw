@@ -53,5 +53,8 @@ root.state('normal')
 # Para ver o codigo de resultado 
 print(root.state())
 root.title(root.state())
+# Mudando a transparencia da aplicação
+# Os valores vão de 0.0 ate 1.0 sendo 00 totalmente transparente e 1.0 totalmente visivel.
+root.attributes("-alpha", 1.0)
 
 root.mainloop()
