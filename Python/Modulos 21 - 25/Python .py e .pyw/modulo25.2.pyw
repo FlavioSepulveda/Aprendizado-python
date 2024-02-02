@@ -55,6 +55,17 @@ print(root.state())
 root.title(root.state())
 # Mudando a transparencia da aplicação
 # Os valores vão de 0.0 ate 1.0 sendo 00 totalmente transparente e 1.0 totalmente visivel.
-root.attributes("-alpha", 1.0)
+root.attributes("-alpha", 1)
+# Ordem de empilhamento da janela.
+# Garante que a minha aplicação sempre esteja no topo ao se manusear outros aplicativos.
+# root.attributes("-topmost", 1)
+
+# Para mover uma janela para cima - Tras pro inicio da fila
+# root.lift()
+
+# Para mover a janela para baixo - Leva pro final da fila
+root.lower()
+
+# O topmost garante que ela sempre fique no topo.
 
 root.mainloop()
