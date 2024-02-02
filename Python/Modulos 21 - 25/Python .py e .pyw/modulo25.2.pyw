@@ -67,5 +67,8 @@ root.attributes("-alpha", 1)
 root.lower()
 
 # O topmost garante que ela sempre fique no topo.
+# Alterando o icone do arquivo
+# Deve ser no formato .ico
+root.iconbitmap("arquivo-python.png")
 
 root.mainloop()
