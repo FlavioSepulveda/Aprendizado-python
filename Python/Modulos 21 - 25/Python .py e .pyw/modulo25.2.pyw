@@ -128,5 +128,9 @@ ttk.Button(
 ).pack()
 # Agora o a função ira realizar o evento conforme a cor repassada pela sua variavel.
 
+# Limitação de comandos
+'''
+    Os comandos respondem a alguns botões e se limitam a alguns widgets como o de botão por exemplo, sendo acionado pelo botão esquerdo do mouse e não pelo direito, e pelo botão de espaço mas não pelo enter.
+'''
 
 root.mainloop()
