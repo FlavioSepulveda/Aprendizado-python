@@ -137,9 +137,14 @@ ttk.Button(
 # Função do notão enter
 def button_pressed(event):
     print('Botão pressionado')
+# Registrando mais de um evento 
+def log(event):
+    print(event)
     
 ente = ttk.Button(root, text='enter')
 ente.bind("<Return>", button_pressed)
+# Para adcionar fazemos como a linkagem de eventos mas com o parametro/metodo add= e dentre aspas '+' (o mais) para afirmar uma adição de evento.
+ente.bind("<Return>", log, add='+')
 ente.focus()
 ente.pack(expand=True)
 
