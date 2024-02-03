@@ -133,4 +133,14 @@ ttk.Button(
     Os comandos respondem a alguns botões e se limitam a alguns widgets como o de botão por exemplo, sendo acionado pelo botão esquerdo do mouse e não pelo direito, e pelo botão de espaço mas não pelo enter.
 '''
 
+# Associação de eventos Tkinter
+# Função do notão enter
+def button_pressed(event):
+    print('Botão pressionado')
+    
+ente = ttk.Button(root, text='enter')
+ente.bind("<Return>", button_pressed)
+ente.focus()
+ente.pack(expand=True)
+
 root.mainloop()
