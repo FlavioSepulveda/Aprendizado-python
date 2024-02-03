@@ -50,18 +50,35 @@ def log(event):
 # root.bind("<Any-KeyPress>", log)
 
 # Niveis de ligaçao -------------------------------------------------
-root.bind_class("Button", "<Any-KeyPress>", log)
-# Tres botões teste:
-btn1 = tk.Button(root, text="First Button!")
-btn1.focus()
-btn1.pack()
+# root.bind_class("Button", "<Any-KeyPress>", log)
+# # Tres botões teste:
+# btn1 = tk.Button(root, text="First Button!")
+# btn1.focus()
+# btn1.pack()
 
-btn2 = tk.Button(root, text="Second Button!")
-btn2.focus()
-btn2.pack()
+# btn2 = tk.Button(root, text="Second Button!")
+# btn2.focus()
+# btn2.pack()
 
-btn3 = tk.Button(root, text="Third Button!")
-btn3.focus()
-btn3.pack()
+# btn3 = ttk.Button(root, text="Third Button!")
+# btn3.bind("<Any-KeyPress>", log)
+# btn3.focus()
+# btn3.pack()
+
+# Desvinculação de eventos ----------------------------------------
+botao1 = ttk.Button(root, text="Executar.")
+botao1.bind("<Any-KeyPress>", log)
+botao1.focus()
+botao1.pack()
+  
+botao2 = ttk.Button(
+    root,text="Desv.",
+    command=lambda: botao1.unbind("<Any-KeyPress>")
+)
+botao2.pack()
+  
+botao3 = ttk.Button(root,text="Vinc.",command=lambda: botao1.bind("<Any-KeyPress>",log))
+botao3.pack()
+    
 
 root.mainloop()
