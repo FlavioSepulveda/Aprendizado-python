@@ -31,20 +31,37 @@ def log(event):
     print(f'Char...: {event.char}')
 
 # Criando botão ----------------------------------------------
-bot1 = ttk.Button(root, text='Botao!')
-bot1.bind("<Return>", log) 
-bot1.focus()
-bot1.pack() 
+# bot1 = ttk.Button(root, text='Botao!')
+# bot1.bind("<Return>", log) 
+# bot1.focus()
+# bot1.pack() 
 
-# <modificador-tipo-detalhe>
-# <KeyPress-A>
-# <Alt-Control-KeyPress-KP_Delete>
+# # <modificador-tipo-detalhe>
+# # <KeyPress-A>
+# # <Alt-Control-KeyPress-KP_Delete>
 
-# Criando botão de ctrl ----------------------------------------
-bot2 = ttk.Button(root, text='Botão 2!')
-bot2.bind("<Any-KeyPress>", log)
-bot2.focus()
-bot2.pack()
+# # Criando botão de ctrl ----------------------------------------
+# bot2 = ttk.Button(root, text='Botão 2!')
+# bot2.bind("<Any-KeyPress>", log)
+# bot2.focus()
+# bot2.pack()
 
+# # Vinculando eventos na janela raiz
+# root.bind("<Any-KeyPress>", log)
+
+# Niveis de ligaçao -------------------------------------------------
+root.bind_class("Button", "<Any-KeyPress>", log)
+# Tres botões teste:
+btn1 = tk.Button(root, text="First Button!")
+btn1.focus()
+btn1.pack()
+
+btn2 = tk.Button(root, text="Second Button!")
+btn2.focus()
+btn2.pack()
+
+btn3 = tk.Button(root, text="Third Button!")
+btn3.focus()
+btn3.pack()
 
 root.mainloop()
