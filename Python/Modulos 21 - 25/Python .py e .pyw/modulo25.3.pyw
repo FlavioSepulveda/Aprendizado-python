@@ -80,5 +80,38 @@ botao2.pack()
 botao3 = ttk.Button(root,text="Vinc.",command=lambda: botao1.bind("<Any-KeyPress>",log))
 botao3.pack()
     
+# Label ttk
+label = ttk.Label(
+    root,
+    text="Label1 \nCurso de python tkinter.",    
+    background='orange',
+    foreground='blue'
+)
+label.pack()
+# Propriedades da label
+label2 = ttk.Label(
+    root,
+    text="Label2",
+    background='red',
+    padding=20,
+    width=15,
+    justify=tk.CENTER, # LEFT RIGHT CENTER
+    anchor='center' # Posicionamento segundo a rosa dos ventos
+).pack()
+
+label3 = ttk.Label(
+    root,
+    text="Fontes",
+    # font= "Arial 12 bold"
+    font=("Verdana", 22, "bold")
+)
+label3.pack()
+# imagem na label
+foto = tk.PhotoImage(file="Exercicios-python/arquivo-python.png")
+
+labelima = ttk.Label(
+    root,
+    image=foto
+).pack()
 
 root.mainloop()
