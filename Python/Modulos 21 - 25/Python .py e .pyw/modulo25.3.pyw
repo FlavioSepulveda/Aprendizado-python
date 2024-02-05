@@ -107,11 +107,54 @@ label3 = ttk.Label(
 )
 label3.pack()
 # imagem na label
-foto = tk.PhotoImage(file="Exercicios-python/arquivo-python.png")
+# foto = tk.PhotoImage(file="Exercicios-python/arquivo-python.png")
 
-labelima = ttk.Label(
+# labelima = ttk.Label(
+#     root,
+#     image=foto
+# ).pack()
+
+# Bordas de labels
+labelTeste = ttk.Label(
     root,
-    image=foto
+    text="Primeira",
+    font="Arial 24",
+    border=10,
+    relief="groove"
+).pack()
+
+labelTeste2 = tk.Label(
+    root,
+    text="Segunda",
+    font="Arial 24",
+    borderwidth=10,
+    relief='groove'
+).pack()
+
+'''
+    Assim como o background o border pode ser declarado como bd.
+'''
+# Implicações de altura, largura e quebra de linhas.
+
+estudo = tk.Label(
+    root,
+    text="0123456789",
+    font='Arial 22',
+    bd=5,
+    relief='solid',
+    width=5,
+    height=2
+).pack()
+# No modulo ttk não temos o height então utilizamos o warplength pra criar outra linha
+estudo2 = ttk.Label(
+    root,
+    text="0123456789",
+    font='Arial 22',
+    border=5,
+    relief='solid',
+    # width=5,
+    wraplength=200 
+    # Esta propriedade tambem existe no modulo tk.
 ).pack()
 
 root.mainloop()
