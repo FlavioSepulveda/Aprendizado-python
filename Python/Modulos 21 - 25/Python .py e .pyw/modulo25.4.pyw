@@ -50,6 +50,15 @@ info = ttk.Button(root, text="Info", command=lambda: mostraInfo()).pack()
 
 # imageBtn = ttk.Button(root,image=imgBtn,text="Nome da imagem",command=mostraInfo)
 # imageBtn.pack(ipadx=5, ipady=5, expand=True)
+# Entry - Text box
+# Caixa de texto -
+textBox = ttk.Entry(
+    root
+)
+textBox.focus()
+textBox.pack()
+btnBox=ttk.Button(root,text="enviar", command=lambda: print(textBox.get())).pack()
 
+# Textbox para senhas - 
 
 root.mainloop()
