@@ -45,4 +45,11 @@ def mostraInfo():
 
 info = ttk.Button(root, text="Info", command=lambda: mostraInfo()).pack()
 
+# # Criando botão com imagem e legenda
+# imgBtn = tk.PhotoImage(file="Caminho do arquivo")
+
+# imageBtn = ttk.Button(root,image=imgBtn,text="Nome da imagem",command=mostraInfo)
+# imageBtn.pack(ipadx=5, ipady=5, expand=True)
+
+
 root.mainloop()
