@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter.messagebox import showinfo
 
 root = tk.Tk()
 root.title("25.4")
@@ -30,5 +31,18 @@ bot3.pack()
 # Linakando o metodo de desabilitar a um botão
 desbilitando = ttk.Button(root, text="Desabilitar", command=lambda: bot1.state(["disabled"])).pack()
 abilitando = ttk.Button(root, text="Abilitar", command=lambda: bot1.state(["!disabled"])).pack()
+
+# Criando botão de imagem
+# botIcon = tk.PhotoImage(file="C:\Users\flavi\OneDrive\Desktop\Py\Aprendizado-python\Python\Modulos 21 - 25\Python .py e .pyw\imagens\arquivo-python.png")
+
+# imagem = ttk.Button(root, image=botIcon)
+# image.pack(ipadx= 5, ipady=5, expand=True)
+
+def mostraInfo():
+    # Quando o botão for clicado deve mostrar uma mensagem alertando que o botaõ foi acionado
+    showinfo(title="Info", message="Click Click")
+    pass
+
+info = ttk.Button(root, text="Info", command=lambda: mostraInfo()).pack()
 
 root.mainloop()
