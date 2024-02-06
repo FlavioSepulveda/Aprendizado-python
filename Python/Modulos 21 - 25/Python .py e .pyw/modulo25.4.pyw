@@ -60,5 +60,7 @@ textBox.pack()
 btnBox=ttk.Button(root,text="enviar", command=lambda: print(textBox.get())).pack()
 
 # Textbox para senhas - 
+# O método show oculta a senha para o usuario.
+passWordBox = ttk.Entry(root, show="*").pack()
 
 root.mainloop()
