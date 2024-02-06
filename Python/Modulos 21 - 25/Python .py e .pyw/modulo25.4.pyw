@@ -16,6 +16,8 @@ def Executar():
     root.quit()
     pass
 
+
+
 botao = ttk.Label(root,text="Widget de botão.", font='Arial 12 underline', foreground='red').pack()
 bot1  = ttk.Button(root, text="Click me.", command=Executar,)
 bot1.state(['!disabled'])
@@ -68,19 +70,37 @@ passWordBox = ttk.Entry(root, show="*").pack()
     String var é um tipo de variavel que serve para manipulação de texto.
 '''
 # Criando a string var que armazena o text box
-texto = tk.StringVar()
+texto1 = tk.StringVar()
 # Define um valor padrão
-texto.set("Nome")
+texto1.set("Nome")
 
-textBox2 = ttk.Entry(root, textvariable=texto, font="Arial 12 italic")
-textBox2.focus()
+textBox2 = ttk.Entry(root, textvariable=texto1, font="Arial 12 italic")
+# textBox2.focus()
 textBox2.select_range(0,tk.END)
 textBox2.pack()
-botao2 = ttk.Button(root, text='Enviar...', command=lambda: print(texto.get())).pack()
+botao2 = ttk.Button(root, text='Enviar...', command=lambda: print(texto1get())).pack()
 
+# Se não for preenchido não envia nada
+def textClick(event):
+    if texto2.get() != "Nome" and texto2.get() != "":
+        msg = f'Bem Vindo(a) {texto2.get()}!'
+        showinfo(title="Informação", message=msg)
+        texto2.set('Nome')
+        textBox3.select_range(0, tk.END)
+        textBox3.focus() 
+    else:
+        showinfo(title="Informação", message='Insira suas informações')
 
-textBox3 = ttk.Entry(root).pack()
+texto2 = tk.StringVar()
+texto2.set('Nome')
 
+# Manipulando eventos dentro da text box:
+textBox3 = ttk.Entry(root, textvariable=texto2, font="Times 12 italic")
+textBox3.select_range(0, tk.END)
+textBox3.focus()
+textBox3.bind("<Return>", textClick)
+textBox3.pack()
 
+botaoDeEnvio = ttk.Button(root, text='Confirma', command=textClick).pack()
 
 root.mainloop()
