@@ -63,4 +63,24 @@ btnBox=ttk.Button(root,text="enviar", command=lambda: print(textBox.get())).pack
 # O método show oculta a senha para o usuario.
 passWordBox = ttk.Entry(root, show="*").pack()
 
+# Stringvar e text var -
+'''
+    String var é um tipo de variavel que serve para manipulação de texto.
+'''
+# Criando a string var que armazena o text box
+texto = tk.StringVar()
+# Define um valor padrão
+texto.set("Nome")
+
+textBox2 = ttk.Entry(root, textvariable=texto, font="Arial 12 italic")
+textBox2.focus()
+textBox2.select_range(0,tk.END)
+textBox2.pack()
+botao2 = ttk.Button(root, text='Enviar...', command=lambda: print(texto.get())).pack()
+
+
+textBox3 = ttk.Entry(root).pack()
+
+
+
 root.mainloop()
