@@ -33,12 +33,20 @@ box4.pack(ipadx=10, ipady=10, fill="x")
 #  As opções desse método são: 'x', 'y' e 'both'
 
 # Usando a opção de expansão
-# Criando o box 5 -
-box5 = tk.Label(root, text="Box5", bg='yellow', fg='white')
-box5.pack(ipadx=10, ipady=10, expand=True)
+
 # Criando o box 6 -
 box6 = tk.Label(root, text="Box6", bg='pink', fg='white')
-box6.pack(ipadx=10, ipady=10, expand=True, fill='both')
+box6.pack(ipadx=10, ipady=10, expand=True, fill='both',side='left')
 # O expand expande uma area para preenchimento quando os widgets possuem a mesma ancora.
+
+# A opção side - muda a criação dos widgets 
+# Criando o box 5 -
+box5 = tk.Label(root, text="Box5", bg='yellow', fg='white')
+box5.pack(ipadx=10, ipady=10, expand=True,fill="both", side='left')
+
+# Quando o usar o gerenciador de geometria pack:
+'''
+    É adequado para colocar widgets de cima para baixo e lado a lado.
+'''
 
 root.mainloop()
