@@ -7,9 +7,15 @@ from tkinter.messagebox import showinfo
 # Iniciando o modulo Tkinter
 root = tk.Tk()
 root.title("Gerenciadores de Geometria")
-root.columnconfigure(index=0, weight=2)
-root.rowconfigure(index=0, weight=1)
-root.geometry('700x500+350+150')
+# root.columnconfigure(index=0, weight=2)
+# root.rowconfigure(index=0, weight=1)
+
+root.geometry('250x150+350+150')
+
+# Configurando a grid
+root.columnconfigure(0, weight=1)
+root.columnconfigure(1, weight=3)
+
 
 # Criando os assuntos do módulo -
 # Criando o box 1 -
@@ -85,6 +91,33 @@ root.geometry('700x500+350+150')
     * W - West
     
 '''
+
+# Uso do gerenciamento de grid
+# Pra esse exemplo vamos usar 2 colunas e 3 linhas
+
+# Criando os widgets
+# Username -------------------------------------------------------
+username_label = ttk.Label(root, text='Username: ', font="Arial 12")
+username_label.grid(column=0, row=0, sticky=tk.W, padx=5, pady=5)
+
+username_entry = ttk.Entry(root)
+username_entry.grid(column=1, row=0, sticky=tk.E, padx=5, pady=5)
+
+# Senha ----------------------------------------------------------
+user_password = ttk.Label(root, text="Password: ", font="Arial 12")
+user_password.grid(column=0, row=1, sticky=tk.W, padx=5, pady=5)
+
+userPass_entry = ttk.Entry(root, show='*')
+userPass_entry.grid(column=1, row=1, sticky=tk.E, padx=5, pady=5)
+
+# Botão de login ------------------------------------------------
+login_button = ttk.Button(root, text="Login")
+login_button.grid(column=1, row=3, sticky=tk.E, padx=5, pady=5)
+
+# O place voce usa as funç x e y
+# Voce chama ele com: nome.place(**Opções)
+# So é util quando voce quer que o usuario decida onde vão ficar os itens.
+
 
 
 root.mainloop()
