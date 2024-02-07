@@ -57,6 +57,34 @@ root.geometry('700x500+350+150')
 # root.columnconfigure(index=0, weight=2)
 # root.rowconfigure(index=0, weight=1)
 
+# Posicionando widgets na grade
+# nomeDoWidget.grid(**Opções)
+
+'''
+    O método grid() possui os seguintes parametros:
+    *column      : O column Indica a coluna que voce quer colocar o widget.
+    *row         : O row indica a linha que ele ira se encontrar.
+    *rowspan     : O rowspan indica o numero de linhas adjacentes que ira ocupar.
+    *columnspan  : O columnspan indica o numero de colunas adjacentes.
+    *sticky      : O sticky se a célula for maior doque o widget ele define o preenchimento.
+    *padx        : Adciona o preenchimento a cima e abaixo.
+    *pady        : Adciona o preenchimento na esquerda e direita.
+    *ipadx        : Adciona o preenchimento interno a cima e abaixo.
+    *ipady        : Adciona o preenchimento interno na esquerda e direita.
+'''
+
+'''
+    *O sticky possui os seguintes valores -
+    * NW - Nort West
+    * N - North
+    * NE - Nort East
+    * E - East
+    * SE - South East
+    * S - South
+    * SW - South West
+    * W - West
+    
+'''
 
 
 root.mainloop()
