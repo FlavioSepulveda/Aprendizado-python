@@ -32,5 +32,13 @@ box4.pack(ipadx=10, ipady=10, fill="x")
 # O metodo fill preenche o espaço com base no eixo x ou y.
 #  As opções desse método são: 'x', 'y' e 'both'
 
+# Usando a opção de expansão
+# Criando o box 5 -
+box5 = tk.Label(root, text="Box5", bg='yellow', fg='white')
+box5.pack(ipadx=10, ipady=10, expand=True)
+# Criando o box 6 -
+box6 = tk.Label(root, text="Box6", bg='pink', fg='white')
+box6.pack(ipadx=10, ipady=10, expand=True, fill='both')
+# O expand expande uma area para preenchimento quando os widgets possuem a mesma ancora.
 
 root.mainloop()
