@@ -1,8 +1,8 @@
 # MODULO 27 - Widgets Tekinter e Ttk(GUI)
-import tkinter as tk
-from tkinter import ttk
+from tkinter import Tk, Text, ttk
 
-root = tk.Tk()
+
+root = Tk()
 root.title('Modulo 27 - TTK(GUI)')
 # root.resizable(0, 0)
 # Introdução ao FRAME
@@ -32,6 +32,13 @@ label2 = ttk.Label(
 	text='O Segundo label do frame',
 	background='green'
 ).pack()
+# Widget text - exibe e permite a alteração de textos
+# Criando caixa de texto com fonte arial tamanho 12, fundo amarelo e cor vermelha
+text = Text(root,height=8,font='Arial 12',background='yellow',foreground='red')
+text.pack()
+text.insert('1.0','Insira seu texto')
+txt = text.get('1.0', '1.4')
+
 
 
 root.mainloop()
