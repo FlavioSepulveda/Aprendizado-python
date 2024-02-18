@@ -39,6 +39,15 @@ text.pack()
 text.insert('1.0','Insira seu texto')
 txt = text.get('1.0', '1.4')
 
+# Ativando e desativando o  widget text -
+# # Alterando a propriedade state do widget.
+# text['state'] = 'disabled'
+# # Para reabilitar mudamos para 'Normal'
+# text['state'] = 'normal'
 
+# criando botão que desablita 
+ttk.Button(root, text="desabilita", command=lambda: text.config(state='disabled')).pack()
+# Botão que reativa
+ttk.Button(root, text="reabilita", command=lambda: text.config(state='normal')).pack()
 
 root.mainloop()
