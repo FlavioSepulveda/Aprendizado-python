@@ -1,17 +1,20 @@
 # MODULO 27 - Widgets Tekinter e Ttk(GUI)
-from tkinter import Tk, Text, ttk
+import tkinter as tk
+from tkinter import ttk
+from tkinter.scrolledtext import ScrolledText
 
-
-root = Tk()
+root = tk.Tk()
 root.title('Modulo 27 - TTK(GUI)')
-root.grid_columnconfigure(0, weight=1)
-root.grid_rowconfigure(0, weight=1)
-# root.resizable(0, 0)
+# root.grid_columnconfigure(0, weight=1)
+# root.grid_rowconfigure(0, weight=1)
+# # root.resizable(0, 0)
 # Introdução ao FRAME
 '''
 	Serve pra organizar um widget a nivel de codificação.
 	*Comparavel a um container
 '''
+st = ScrolledText(root, width=50, height=10, font='Arial 24')
+st.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
 # frame1 = ttk.Frame(
 # 	root,
 # 	width=400,
@@ -53,13 +56,15 @@ root.grid_rowconfigure(0, weight=1)
 # ttk.Button(root, text="reabilita", command=lambda: text.config(state='normal')).pack()
 
 # Widget de barra de rolagem - ela é um item independente
-text = Text(root, height=8, font='Arial, 12')
-text.grid(row=0, column=0, sticky="ew")
-# Barra de rolagem
-roll = ttk.Scrollbar(root, orient='vertical', command=text.yview)
-roll.grid(row=0, column=1, sticky='ns')
-# O text faz isso com o intermedio da 'yscrollcommand'
-text['yscrollcommand'] = roll.set
-# Ele ativa ela apenas quando a barra de rolagem esta ativa
+# text = tk.Text(root, height=8, font='Arial, 12').pack()
+# text.grid(row=0, column=0, sticky="ew")
+# # Barra de rolagem
+# roll = ttk.Scrollbar(root, orient='vertical', command=text.yview)
+# roll.grid(row=0, column=1, sticky='ns')
+# # O text faz isso com o intermedio da 'yscrollcommand'
+# text['yscrollcommand'] = roll.set
+# # Ele ativa ela apenas quando a barra de rolagem esta ativa
+# Scroll de teste
+
 
 root.mainloop()
