@@ -76,19 +76,48 @@ root.geometry('700x500')
 
 # ttk.Label(root, text='segundo label', font='Arial 24').pack(side='left')
 # Check box
-concordar = tk.StringVar()
+# concordar = tk.StringVar()
 
-def resultadoCheck():
-    showinfo('Resulado', f'O usuario: {concordar.get()}')
+# def resultadoCheck():
+#     showinfo('Resulado', f'O usuario: {concordar.get()}')
 
-ttk.Checkbutton(root, 
-                text='Clica ai man',
-                variable=concordar,
-                # command=lambda: print(concordar.get()),
-                command=resultadoCheck,
-                onvalue='concorda',
-                offvalue='não concorda').pack()
+# ttk.Checkbutton(root, 
+#                 text='Clica ai man',
+#                 variable=concordar,
+#                 # command=lambda: print(concordar.get()),
+#                 command=resultadoCheck,
+#                 onvalue='concorda',
+#                 offvalue='não concorda').pack()
 
+# Criando radio buttons
+'''
+	cada radio buttom possui um balor diverente.
+'''
+# selected_size = tk.StringVar()
+    
 
+# ttk.Label(root, text='Qual o tamanho da sua camiseta?')
+
+# ttk.Radiobutton(root,
+#                 text='pequena',
+#                 value='p',
+# 				variable=selected_size
+# ).pack(fill='x', padx=5, pady=5)
+# ttk.Radiobutton(root,
+#                 text='media',
+#                 value='m',
+# 				variable=selected_size
+# ).pack(fill='x', padx=5, pady=5)
+# ttk.Radiobutton(root,
+#                 text='grande',
+#                 value='g',
+# 				variable=selected_size
+# ).pack(fill='x', padx=5, pady=5)
+
+# ttk.Button(root, text='Seleção', command=lambda: showinfo('Confirme sua escolha.', f'Tamanho escolhido: {selected_size.get()}')).pack(fill='x', padx=5, pady=5)
+# Combo box
+
+# Permite selecionar um valor em um grupo de valores.
+day_cb = ttk.Combobox(root).pack(fill='x', padx=5, pady=5)
 
 root.mainloop()
