@@ -2,19 +2,21 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter.scrolledtext import ScrolledText
+from tkinter.messagebox import showinfo
 
 root = tk.Tk()
 root.title('Modulo 27 - TTK(GUI)')
 # root.grid_columnconfigure(0, weight=1)
 # root.grid_rowconfigure(0, weight=1)
-# # root.resizable(0, 0)
+root.resizable(0, 0)
+root.geometry('700x500')
 # Introdução ao FRAME
 '''
 	Serve pra organizar um widget a nivel de codificação.
 	*Comparavel a um container
 '''
-st = ScrolledText(root, width=50, height=10, font='Arial 24')
-st.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
+# st = ScrolledText(root, width=50, height=10, font='Arial 24')
+# st.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
 # frame1 = ttk.Frame(
 # 	root,
 # 	width=400,
@@ -27,7 +29,7 @@ st.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
 # # # Ele tem suas caracteristicas mas não é visivel por ser um container.
 # # Posso colocar widgets dentro do frame
 # label1 = ttk.Label(
-# 	frame1,	
+# 	frame1,
 #  	text='Primeiro label pro frame',
 # 	background='yellow'
 # ).pack()
@@ -50,7 +52,7 @@ st.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
 # # Para reabilitar mudamos para 'Normal'
 # text['state'] = 'normal'
 
-# criando botão que desablita 
+# criando botão que desablita
 # ttk.Button(root, text="desabilita", command=lambda: text.config(state='disabled')).pack()
 # # Botão que reativa
 # ttk.Button(root, text="reabilita", command=lambda: text.config(state='normal')).pack()
@@ -65,6 +67,28 @@ st.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
 # text['yscrollcommand'] = roll.set
 # # Ele ativa ela apenas quando a barra de rolagem esta ativa
 # Scroll de teste
+# widget separador
+# usamos o método separator
+# ttk.Label(root, text='primeiro label', font='Arial 24').pack(side='left')
+
+# separador = ttk.Separator(root, orient='vertical')
+# separador.pack(fill='y', side='left')
+
+# ttk.Label(root, text='segundo label', font='Arial 24').pack(side='left')
+# Check box
+concordar = tk.StringVar()
+
+def resultadoCheck():
+    showinfo('Resulado', f'O usuario: {concordar.get()}')
+
+ttk.Checkbutton(root, 
+                text='Clica ai man',
+                variable=concordar,
+                # command=lambda: print(concordar.get()),
+                command=resultadoCheck,
+                onvalue='concorda',
+                offvalue='não concorda').pack()
+
 
 
 root.mainloop()
