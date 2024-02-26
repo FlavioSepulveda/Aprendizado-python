@@ -115,9 +115,20 @@ root.geometry('700x500')
 # ).pack(fill='x', padx=5, pady=5)
 
 # ttk.Button(root, text='Seleção', command=lambda: showinfo('Confirme sua escolha.', f'Tamanho escolhido: {selected_size.get()}')).pack(fill='x', padx=5, pady=5)
-# Combo box
+# Combo box- 
+# selected_day = tk.StringVar()
+# def cb_result(event):
+#     showinfo(title='Resultado', message=f'voce selecionou: {day_cb.get()}')
+# # Permite selecionar um valor em um grupo de valores.
+# day_cb = ttk.Combobox(root,
+#                     state='readonly',
+#                     textvariable=selected_day
+# )
+# day_cb['values'] = ['Domingo','Segunda','Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado']
+# # day_cb.set('Domingo')
+# selected_day.set('Segunda')
+# day_cb.bind('<<ComboboxSelected>>', cb_result)
+# day_cb.pack(fill='x', padx=5, pady=5)
 
-# Permite selecionar um valor em um grupo de valores.
-day_cb = ttk.Combobox(root).pack(fill='x', padx=5, pady=5)
 
 root.mainloop()
