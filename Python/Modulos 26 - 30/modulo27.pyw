@@ -129,6 +129,24 @@ root.geometry('700x500')
 # selected_day.set('Segunda')
 # day_cb.bind('<<ComboboxSelected>>', cb_result)
 # day_cb.pack(fill='x', padx=5, pady=5)
+# Listbox -
+langs = ('Java', 'c', 'c++', 'python', 'go', 'javascript', 'swift')
+langs_var = tk.StringVar(value=langs)
 
+listbox = tk.Listbox(
+	root,
+	listvariable= langs_var,
+	height=6,
+	font='Arial 12',
+	selectmode='browse' # O outro modo é o extend permite a seleção de mais de um com o botão ctrl do teclado.
+)
+listbox.pack(fill=tk.X, padx=5, pady=5)
+
+def item_selecionado(event):
+	selected_indices = listbox.curselection()
+	for i in selected_indices:
+		print(listbox.get(i))
+
+listbox.bind('<<ListboxSelect>>', item_selecionado)
 
 root.mainloop()
