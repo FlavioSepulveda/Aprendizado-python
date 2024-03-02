@@ -170,7 +170,8 @@ currentValue = tk.DoubleVar()
 
 def slider_change(event):
     # print(currentValue.get())
-    print(slider.get())
+    val = slider.get()
+    print("{: .2f}".format(val))
 
 
 '''
@@ -185,5 +186,19 @@ slider = ttk.Scale(
     command=slider_change
 )
 slider.pack()
+# Para desativar ou ativar precisamos mudar o estado do slider:
+slider['state']
+
+ttk.Button(
+    root,
+    text='Desligar',
+    command=lambda: slider.configure(state='disabled')
+).pack()
+ttk.Button(
+    root,
+    text='Ligar',
+    command=lambda: slider.configure(state='normal')
+).pack()
+
 
 root.mainloop()
