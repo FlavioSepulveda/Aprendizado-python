@@ -81,7 +81,7 @@ root.geometry('700x500')
 # def resultadoCheck():
 #     showinfo('Resulado', f'O usuario: {concordar.get()}')
 
-# ttk.Checkbutton(root, 
+# ttk.Checkbutton(root,
 #                 text='Clica ai man',
 #                 variable=concordar,
 #                 # command=lambda: print(concordar.get()),
@@ -94,7 +94,7 @@ root.geometry('700x500')
 	cada radio buttom possui um balor diverente.
 '''
 # selected_size = tk.StringVar()
-    
+
 
 # ttk.Label(root, text='Qual o tamanho da sua camiseta?')
 
@@ -115,7 +115,7 @@ root.geometry('700x500')
 # ).pack(fill='x', padx=5, pady=5)
 
 # ttk.Button(root, text='Seleção', command=lambda: showinfo('Confirme sua escolha.', f'Tamanho escolhido: {selected_size.get()}')).pack(fill='x', padx=5, pady=5)
-# Combo box- 
+# Combo box-
 # selected_day = tk.StringVar()
 # def cb_result(event):
 #     showinfo(title='Resultado', message=f'voce selecionou: {day_cb.get()}')
@@ -130,23 +130,60 @@ root.geometry('700x500')
 # day_cb.bind('<<ComboboxSelected>>', cb_result)
 # day_cb.pack(fill='x', padx=5, pady=5)
 # Listbox -
-langs = ('Java', 'c', 'c++', 'python', 'go', 'javascript', 'swift')
-langs_var = tk.StringVar(value=langs)
+# langs = ('Java', 'c', 'c++', 'python', 'go', 'javascript', 'swift')
+# langs_var = tk.StringVar(value=langs)
 
-listbox = tk.Listbox(
-	root,
-	listvariable= langs_var,
-	height=6,
-	font='Arial 12',
-	selectmode='browse' # O outro modo é o extend permite a seleção de mais de um com o botão ctrl do teclado.
+# listbox = tk.Listbox(
+#     root,
+#     listvariable=langs_var,
+#     height=6,
+#     font='Arial 12',
+#     # O outro modo é o extend permite a seleção de mais de um com o botão ctrl do teclado.
+#     selectmode='browse'
+# )
+# listbox.grid(column=0, row=0, sticky='nwes')
+
+
+# scrollbar = ttk.Scrollbar(
+#     root,
+#     orient='vertical',
+#     command=listbox.yview
+# )
+# listbox['yscrollcommand'] = scrollbar.set
+# scrollbar.grid(
+# 	column=1,
+# 	row=0,
+# 	sticky='ns'
+# )
+
+# def item_selecionado(event):
+#     selected_indices = listbox.curselection()
+#     for i in selected_indices:
+#         print(listbox.get(i))
+
+
+# listbox.bind('<<ListboxSelect>>', item_selecionado)
+
+# tkinter slider
+currentValue = tk.DoubleVar()
+
+
+def slider_change(event):
+    # print(currentValue.get())
+    print(slider.get())
+
+
+'''
+	O slider precisa ter o event para evitar um erro em sua sintaxe.
+'''
+
+slider = ttk.Scale(
+    root,
+    from_=0,
+    to=100,
+    variable=currentValue,
+    command=slider_change
 )
-listbox.pack(fill=tk.X, padx=5, pady=5)
-
-def item_selecionado(event):
-	selected_indices = listbox.curselection()
-	for i in selected_indices:
-		print(listbox.get(i))
-
-listbox.bind('<<ListboxSelect>>', item_selecionado)
+slider.pack()
 
 root.mainloop()
