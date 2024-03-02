@@ -8,7 +8,7 @@ root = tk.Tk()
 root.title('Modulo 27 - TTK(GUI)')
 # root.grid_columnconfigure(0, weight=1)
 # root.grid_rowconfigure(0, weight=1)
-root.resizable(0, 0)
+root.resizable(0, 0) # Garantindo que seja redimencionavel
 root.geometry('700x500')
 # Introdução ao FRAME
 '''
@@ -201,24 +201,37 @@ root.geometry('700x500')
 # ).pack()
 #
 
-current_value = tk.StringVar(value=0)
+# current_value = tk.StringVar(value=0)
 
 
-def value_changed():
-    print(current_value.get())
+# def value_changed():
+#     print(current_value.get())
 
 
-valores = (0, 2, 4, 6, 8, 10)
+# valores = (0, 2, 4, 6, 8, 10)
 
-spinbox = ttk.Spinbox(root,
-					# from_=0,
-					# to=100,
-					textvariable=current_value,
-					font='Arial 12',
-					command=value_changed,
-					wrap=True,
-					values=valores
-					)
-spinbox.pack()
+# spinbox = ttk.Spinbox(root,
+# 					# from_=0,
+# 					# to=100,
+# 					textvariable=current_value,
+# 					font='Arial 12',
+# 					command=value_changed,
+# 					wrap=True,
+# 					values=valores
+# 					)
+# spinbox.pack()
+# sg = ttk.Sizegrip(root)
+# sg.grid(row=1, sticky='SE')
+lf = ttk.Labelframe(root, text='Alinhamento',labelanchor='n')
+lf.grid(column=0, row=0, padx=20, pady=20)
+
+stringvar = tk.StringVar()
+
+rb1 = ttk.Radiobutton(lf, text='Esquerda',value='E',textvariable=stringvar)
+rb1.grid(column=0, row=0, ipadx=10, ipady=10)
+rb2 = ttk.Radiobutton(lf, text='meio',value='C',textvariable=stringvar)
+rb2.grid(column=1, row=0, ipadx=10, ipady=10)
+rb2 = ttk.Radiobutton(lf, text='direita',value='D',textvariable=stringvar)
+rb2.grid(column=2, row=0, ipadx=10, ipady=10)
 
 root.mainloop()
