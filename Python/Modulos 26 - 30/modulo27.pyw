@@ -165,40 +165,60 @@ root.geometry('700x500')
 # listbox.bind('<<ListboxSelect>>', item_selecionado)
 
 # tkinter slider
-currentValue = tk.DoubleVar()
+# currentValue = tk.DoubleVar()
 
 
-def slider_change(event):
-    # print(currentValue.get())
-    val = slider.get()
-    print("{: .2f}".format(val))
+# def slider_change(event):
+#     # print(currentValue.get())
+#     val = slider.get()
+#     print("{: .2f}".format(val))
 
 
-'''
-	O slider precisa ter o event para evitar um erro em sua sintaxe.
-'''
+# '''
+# 	O slider precisa ter o event para evitar um erro em sua sintaxe.
+# '''
 
-slider = ttk.Scale(
-    root,
-    from_=0,
-    to=100,
-    variable=currentValue,
-    command=slider_change
-)
-slider.pack()
-# Para desativar ou ativar precisamos mudar o estado do slider:
-slider['state']
+# slider = ttk.Scale(
+#     root,
+#     from_=0,
+#     to=100,
+#     variable=currentValue,
+#     command=slider_change
+# )
+# slider.pack()
+# # Para desativar ou ativar precisamos mudar o estado do slider:
+# slider['state']
 
-ttk.Button(
-    root,
-    text='Desligar',
-    command=lambda: slider.configure(state='disabled')
-).pack()
-ttk.Button(
-    root,
-    text='Ligar',
-    command=lambda: slider.configure(state='normal')
-).pack()
+# ttk.Button(
+#     root,
+#     text='Desligar',
+#     command=lambda: slider.configure(state='disabled')
+# ).pack()
+# ttk.Button(
+#     root,
+#     text='Ligar',
+#     command=lambda: slider.configure(state='normal')
+# ).pack()
+#
 
+current_value = tk.StringVar(value=0)
+
+
+def value_changed():
+    print(current_value.get())
+
+
+valores = (0, 2, 4, 6, 8, 10)
+
+spinbox = ttk.Spinbox(root,
+					# from_=0,
+					# to=100,
+					textvariable=current_value,
+					font='Arial 12',
+					command=value_changed,
+					wrap=True,
+					values=valores
+					)
+spinbox.pack()
 
 root.mainloop()
