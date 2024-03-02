@@ -222,16 +222,26 @@ root.geometry('700x500')
 # spinbox.pack()
 # sg = ttk.Sizegrip(root)
 # sg.grid(row=1, sticky='SE')
-lf = ttk.Labelframe(root, text='Alinhamento',labelanchor='n')
-lf.grid(column=0, row=0, padx=20, pady=20)
+# lf = ttk.Labelframe(root, text='Alinhamento',labelanchor='n')
+# lf.grid(column=0, row=0, padx=20, pady=20)
 
-stringvar = tk.StringVar()
+# stringvar = tk.StringVar()
 
-rb1 = ttk.Radiobutton(lf, text='Esquerda',value='E',textvariable=stringvar)
-rb1.grid(column=0, row=0, ipadx=10, ipady=10)
-rb2 = ttk.Radiobutton(lf, text='meio',value='C',textvariable=stringvar)
-rb2.grid(column=1, row=0, ipadx=10, ipady=10)
-rb2 = ttk.Radiobutton(lf, text='direita',value='D',textvariable=stringvar)
-rb2.grid(column=2, row=0, ipadx=10, ipady=10)
+# rb1 = ttk.Radiobutton(lf, text='Esquerda',value='E',textvariable=stringvar)
+# rb1.grid(column=0, row=0, ipadx=10, ipady=10)
+# rb2 = ttk.Radiobutton(lf, text='meio',value='C',textvariable=stringvar)
+# rb2.grid(column=1, row=0, ipadx=10, ipady=10)
+# rb2 = ttk.Radiobutton(lf, text='direita',value='D',textvariable=stringvar)
+# rb2.grid(column=2, row=0, ipadx=10, ipady=10)
+
+# Barra de progresso:
+pb=ttk.Progressbar(
+	root,
+	orient='horizontal', # Vertical
+	length=300,
+	mode='determinate' # indeterminate
+)
+pb.pack()
+pb.start()
 
 root.mainloop()
