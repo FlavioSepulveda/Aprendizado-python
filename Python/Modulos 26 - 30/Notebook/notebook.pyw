@@ -23,4 +23,35 @@ frame2.pack(fill='both', expand=True)
 notebook.add(frame1, text='Informação geral')
 notebook.add(frame2, text='Menu inicial')
 
+ttk.Button(
+    root,
+    text='Mostrar',
+    command=lambda: notebook.add(frame1, text='Informação geral')
+).pack()
+ttk.Button(
+    root,
+    text='Menu',
+    command=lambda: notebook.add(frame2, text='Menu inicial')
+).pack()
+ttk.Button(
+    root,
+    text='Esconder 1',
+    command=lambda: notebook.hide(0)
+).pack()
+ttk.Button(
+    root,
+    text='Esconder 2',
+    command=lambda: notebook.hide(1)
+).pack()
+ttk.Button(
+    root,
+    text='Apagar 1',
+    command=lambda: notebook.forget(0)
+).pack()
+ttk.Button(
+    root,
+    text='Apagar 2',
+    command=lambda: notebook.forget(1)
+).pack()
+
 root.mainloop()
