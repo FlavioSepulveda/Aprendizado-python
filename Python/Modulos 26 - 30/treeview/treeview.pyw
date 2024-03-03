@@ -60,6 +60,8 @@ tree.insert('0', tk.END, values=('Gabriel'), iid=5, open=False)
 tree.insert('3', tk.END, values=('Dani'), iid=6, open=False)
 tree.insert('2', tk.END, values=('Arthur'), iid=7, open=False)
 
+tree.move(3, 2, tk.END)
+
 tree.grid(row=0, column=0, sticky='nsew')
 
 
