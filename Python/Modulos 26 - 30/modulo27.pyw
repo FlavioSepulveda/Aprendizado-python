@@ -235,13 +235,15 @@ root.geometry('700x500')
 # rb2.grid(column=2, row=0, ipadx=10, ipady=10)
 
 # Barra de progresso:
-pb=ttk.Progressbar(
-	root,
-	orient='horizontal', # Vertical
-	length=300,
-	mode='determinate' # indeterminate
-)
-pb.pack()
-pb.start()
+# pb=ttk.Progressbar(
+# 	root,
+# 	orient='horizontal', # Vertical
+# 	length=300,
+# 	mode='determinate' # indeterminate
+# )
+# pb.pack()
+# pb.start()
+
+
 
 root.mainloop()
