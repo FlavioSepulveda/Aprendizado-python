@@ -15,9 +15,13 @@ for n in range(1, 100):
 columns = ('Nome', 'Sobrenome', 'Email')
 tree = ttk.Treeview(root, columns=columns, show='headings')
 # 'Tree', 'Tree headings' e 'headings', ''
-tree.heading('Nome', text='Nome')
-tree.heading('Sobrenome', text='Sobrenome')
-tree.heading('Email', text='Email')
+tree.heading('Nome', text='Nome', anchor=tk.W)
+tree.heading('Sobrenome', text='Sobrenome', anchor=tk.W)
+tree.heading('Email', text='Email', anchor=tk.CENTER)
+
+tree.column('Nome', width=100, anchor=tk.W)
+tree.column('Sobrenome', width=100, anchor=tk.W)
+tree.column('Email', width=300,anchor=tk.CENTER)
 
 # tree.insert("", tk.END, values=('Natsuki', 'Subaru', 'xxxxxx@gmail.com'))
 # tree.insert("", tk.END, values=('Vanastrea', 'Reinhard', 'xxxxxx@gmail.com'))
