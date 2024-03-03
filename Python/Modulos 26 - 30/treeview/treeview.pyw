@@ -29,9 +29,7 @@ for contact in contacts:
 
 def item_selected(event):
     for selected_item in tree.selection():
-        item = tree.item(selected_item)
-        record = item['values']
-        print(record)
+        tree.delete(selected_item)
 
 
 tree.bind('<<TreeviewSelect>>', item_selected)
