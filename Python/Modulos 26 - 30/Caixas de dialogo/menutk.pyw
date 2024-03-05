@@ -7,15 +7,16 @@ class App(tk.Tk):
         super().__init__()
         self.title('Menus')
         self.geometry('700x500')
-        
+        # Criando a barra do menu
         menubar = tk.Menu(self)
         self.configure(menu=menubar)
-        
-        file_menu = tk.Menu(menubar)
+        # Criando um menu
+        file_menu = tk.Menu(menubar, tearoff=False)
         file_menu.add_command(
             label='Exit',
             command=lambda: self.destroy()
         )
+        # Adcionando o menu na barra de menu-
         menubar.add_cascade(
             label='File',
             menu=file_menu,
