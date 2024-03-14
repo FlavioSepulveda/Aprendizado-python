@@ -51,12 +51,3 @@ class App(tk.Tk):
 if __name__ == '__main__':
     app = App()
     app.mainloop()
-    
-
-
-
-
-# plt.title('Langs Popularity')
-# plt.bar(languages,popularity)
-
-# plt.show()
