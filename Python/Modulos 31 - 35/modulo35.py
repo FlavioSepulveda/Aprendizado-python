@@ -58,3 +58,24 @@ import numpy as np
 
 # print(f'O numero de dimensões presente na variavel "e" é de: {e.ndim}.')
 
+# indexação de uma matriz no numpy
+
+# arr = np.array([1,2,3,4])
+# # print(arr[1]) # Se acessa o indice igual nas listas
+# som = arr[1] + arr[2]  #deve imprimir 5
+# print(som)
+
+# # Matriz 2d acesso aos indices -
+# arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])
+# # Temos que pensar em linhas e colunas -
+# print(f'segundo elemento da 1° linha é: {arr[0,1]}')
+# nomeDoArray[numeroDaLinha, indexDoValor]
+
+# Matriz 3D
+# arr = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
+# print(arr[0, 1, 2])
+
+# Ele permite a indexação negativa
+arr = np.array([[1,2,3,4,5],[6,7,8,9,10]])
+# Para acessar o numero 10 podemos determinar um valor negativo apos determinar em qual linha ele se encontra
+print(arr[1,-1])
