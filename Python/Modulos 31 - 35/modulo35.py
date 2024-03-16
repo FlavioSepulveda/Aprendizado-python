@@ -116,3 +116,57 @@ import numpy as np
 # print(arr[0:2, 2])
 # # Podemos pegar o fatiamento das duas linhas da seguinte maneira -
 # print(arr[0:2, 1:4])
+
+# Tipos de dados no Numpy
+
+# arr = np.array([1,2,3,4,5,6,7], dtype='S')
+arr = np.array([1,2,3,4,5,6,7], dtype='i4')
+arr2 = np.array(['maçã', 'banana', 'cereja'])
+# arr3 = np.array(['a', '2', '3'], dtype='i')
+
+# Gerando um erro que so é gerado ao receber um valor inesperado dentro do array.
+# print(arr3.dtype) 
+print(arr.dtype)
+print(arr2.dtype)
+
+# No python existem apenas os seguintes tipos de dados:
+# strings, inteiros, float, boleanos e complex
+
+# No numpy temos:
+'''
+    i = inteiro
+    b = boolean
+    u = inteiro sem sinal
+    f = float
+    c = float (complex)
+    m = timedelta
+    M = Data  Hora
+    O = objeto
+    S = String
+    U = Sequencia Unicode
+    V = Pedaço fixo de memoria para outro tipo (void)
+    * A propriedade dtype retorna o tipo de dado presente no array
+'''
+
+# convertendo o tipo de matriz para outro
+# isso so pode ser feito criando uma copia da matriz
+
+arrConv = np.array([1.1, 2.1, 3.1])
+novoArr = arrConv.astype('i')
+
+print(arrConv)
+print(novoArr.dtype)
+print(novoArr)
+
+
+# Array booleano =
+
+arrBool = np.array([1, 0, 3])
+
+novoArr2 = arrBool.astype(bool)
+
+print(arrBool)
+print(arrBool.dtype)
+
+print(novoArr2.dtype)
+print(novoArr2)
