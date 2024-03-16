@@ -188,14 +188,50 @@ import numpy as np
 # print(x.base) # Vai mostrar 'None' pois ele não tem uma base
 # print(y.base) # Vai mostrar a base
 
-# Forma de uma matriz numpy
-arr = np.array([[1,2,3,4], [5,6,7,8]])
+# # Forma de uma matriz numpy
+# arr = np.array([[1,2,3,4], [5,6,7,8]])
 
-# As matrizes tem um atributo que retona o indice de cada valor dentro dela.
-# Atributo shape
-print(f'O array a cima tem: {arr.shape}') # Retorna 2 dimensões e 4 elementos.
-print(arr)
+# # As matrizes tem um atributo que retona o indice de cada valor dentro dela.
+# # Atributo shape
+# print(f'O array a cima tem: {arr.shape}') # Retorna 2 dimensões e 4 elementos.
+# print(arr)
 
-quintaDimensao = np.array([1,2,3,4],ndmin=5)
+# quintaDimensao = np.array([1,2,3,4],ndmin=5)
 
-print(quintaDimensao.shape)
+# print(quintaDimensao.shape)
+
+# Remodelagem de matrizes numpy -
+# exemplo1 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+# # Remodelar nos permite alterar as dimensões de um array
+# # Os valores quando multiplicados devem resultar na quantidade de valores presentes dentro do array.
+# # x = exemplo1.reshape(4,3) # 2° dimensão com quatro arrays de 3 elementos cada (4*3=12)
+# x = exemplo1.reshape(2,3,2) # 3° dimensão com 6 arrays de 2 elementos cada (2*3=6*2=12)
+# print(x) 
+# # Dimensões desconhecidas -
+# y = exemplo1.reshape(2,2,-1) # ele vai calcular uma das dimensões
+# print(y)
+
+# # Achatamento de matriz é o caminho inverso do reshape
+# arr = np.array([[1,2,3,4], [5,6,7,8]])
+# x1 = arr.reshape(-1)
+# print(x1)
+
+# Interação de uma matriz-
+# arr = np.array([1, 2, 3])
+# arr = np.array([[1, 2, 3],[4,5,6]])
+# arr = np.array([[[1, 2, 3],[ 4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+
+# Matriz de 1 dimensão -
+# for i in arr:
+#     print(i)
+
+# Matriz de 2 dimensões -
+# for i in arr:
+#     for x in i:
+#         print(x)
+
+# Matriz de 3 dimensões -
+# for x in arr:
+#     for y in x:
+#         for i in y:
+#             print(i)
