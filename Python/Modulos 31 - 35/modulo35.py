@@ -120,14 +120,14 @@ import numpy as np
 # Tipos de dados no Numpy
 
 # arr = np.array([1,2,3,4,5,6,7], dtype='S')
-arr = np.array([1,2,3,4,5,6,7], dtype='i4')
-arr2 = np.array(['maçã', 'banana', 'cereja'])
-# arr3 = np.array(['a', '2', '3'], dtype='i')
+# arr = np.array([1,2,3,4,5,6,7], dtype='i4')
+# arr2 = np.array(['maçã', 'banana', 'cereja'])
+# # arr3 = np.array(['a', '2', '3'], dtype='i')
 
-# Gerando um erro que so é gerado ao receber um valor inesperado dentro do array.
-# print(arr3.dtype) 
-print(arr.dtype)
-print(arr2.dtype)
+# # Gerando um erro que so é gerado ao receber um valor inesperado dentro do array.
+# # print(arr3.dtype) 
+# print(arr.dtype)
+# print(arr2.dtype)
 
 # No python existem apenas os seguintes tipos de dados:
 # strings, inteiros, float, boleanos e complex
@@ -151,22 +151,39 @@ print(arr2.dtype)
 # convertendo o tipo de matriz para outro
 # isso so pode ser feito criando uma copia da matriz
 
-arrConv = np.array([1.1, 2.1, 3.1])
-novoArr = arrConv.astype('i')
+# arrConv = np.array([1.1, 2.1, 3.1])
+# novoArr = arrConv.astype('i')
 
-print(arrConv)
-print(novoArr.dtype)
-print(novoArr)
+# print(arrConv)
+# print(novoArr.dtype)
+# print(novoArr)
 
 
-# Array booleano =
+# # Array booleano =
 
-arrBool = np.array([1, 0, 3])
+# arrBool = np.array([1, 0, 3])
 
-novoArr2 = arrBool.astype(bool)
+# novoArr2 = arrBool.astype(bool)
 
-print(arrBool)
-print(arrBool.dtype)
+# print(arrBool)
+# print(arrBool.dtype)
 
-print(novoArr2.dtype)
-print(novoArr2)
+# print(novoArr2.dtype)
+# print(novoArr2)
+
+# Copiando um array -
+arr = np.array([1,2,3,4,5,6])
+# x = arr.copy() # Cria uma copia
+x = arr.copy() # Apresenta uma vizualização, por esse motivo quando um objeto é alterado nela, tbm é alterado no array principal durante a visualização
+# x[2] = 6
+# arr[0] = 42
+# print(arr)
+# print(x)
+
+# Copias - São proprietarias dos seus proprios dados.
+# Vizualizações - Compartilham os mesmos dados umas com as outras. (Elas apontam para os dados originais de uma matriz).
+
+# O atributo base mostra os dados originais
+y = arr.view()
+print(x.base) # Vai mostrar 'None' pois ele não tem uma base
+print(y.base) # Vai mostrar a base
