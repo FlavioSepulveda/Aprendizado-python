@@ -257,3 +257,18 @@ import numpy as np
 
 # for x in np.nditer(arr[:, ::2]):
 #     print(x)
+
+# interando com numeros -
+# arr = np.array([1,2,3])
+# arr = np.array([[1,2,3,4], [5,6,7,8]])
+
+# for idx, x in np.ndenumerate(arr):
+#     # Retorna o id da dimensão e o id do item presente nela -
+#     print(idx, '', x)
+# 
+# união de matrizes -
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([5, 6, 7, 8])
+# O argumento 'axis' pode ser usado apos a tipla com os valores a serem concatenados para indicar o numero de eixos presentes.
+x = np.concatenate((arr1, arr2))
+print(x)
