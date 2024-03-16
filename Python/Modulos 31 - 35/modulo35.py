@@ -172,18 +172,30 @@ import numpy as np
 # print(novoArr2)
 
 # Copiando um array -
-arr = np.array([1,2,3,4,5,6])
-# x = arr.copy() # Cria uma copia
-x = arr.copy() # Apresenta uma vizualização, por esse motivo quando um objeto é alterado nela, tbm é alterado no array principal durante a visualização
-# x[2] = 6
-# arr[0] = 42
-# print(arr)
-# print(x)
+# arr = np.array([1,2,3,4,5,6])
+# # x = arr.copy() # Cria uma copia
+# x = arr.copy() # Apresenta uma vizualização, por esse motivo quando um objeto é alterado nela, tbm é alterado no array principal durante a visualização
+# # x[2] = 6
+# # arr[0] = 42
+# # print(arr)
+# # print(x)
 
-# Copias - São proprietarias dos seus proprios dados.
-# Vizualizações - Compartilham os mesmos dados umas com as outras. (Elas apontam para os dados originais de uma matriz).
+# # Copias - São proprietarias dos seus proprios dados.
+# # Vizualizações - Compartilham os mesmos dados umas com as outras. (Elas apontam para os dados originais de uma matriz).
 
-# O atributo base mostra os dados originais
-y = arr.view()
-print(x.base) # Vai mostrar 'None' pois ele não tem uma base
-print(y.base) # Vai mostrar a base
+# # O atributo base mostra os dados originais
+# y = arr.view()
+# print(x.base) # Vai mostrar 'None' pois ele não tem uma base
+# print(y.base) # Vai mostrar a base
+
+# Forma de uma matriz numpy
+arr = np.array([[1,2,3,4], [5,6,7,8]])
+
+# As matrizes tem um atributo que retona o indice de cada valor dentro dela.
+# Atributo shape
+print(f'O array a cima tem: {arr.shape}') # Retorna 2 dimensões e 4 elementos.
+print(arr)
+
+quintaDimensao = np.array([1,2,3,4],ndmin=5)
+
+print(quintaDimensao.shape)
