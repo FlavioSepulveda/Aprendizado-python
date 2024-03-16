@@ -235,3 +235,25 @@ import numpy as np
 #     for y in x:
 #         for i in y:
 #             print(i)
+
+# Interando com o nditer(])
+# arr1 = np.array([1,2,3,4,5,6,7,8])
+# arr2 = np.array([[1,2,3,4], [5,6,7,8]])
+# arr3 = np.array([[[1,2],[3,4]], [[5,6],[7,8]]])
+
+# # Evitando a escrita de infinitos loops for no script-
+# for x in np.nditer(arr3):
+#     print(x)
+
+# interando com varios tipos de dados-
+
+# arr = np.array([1,2,3])
+# for i in np.nditer(arr, flags=['buffered'], op_dtypes=['S']):
+#     print(i, '', i.dtype)
+
+# Interando com tamanho de etapas diferentes -
+
+# arr = np.array([[1, 2, 3, 4],[5, 6, 7, 8]])
+
+# for x in np.nditer(arr[:, ::2]):
+#     print(x)
