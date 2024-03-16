@@ -76,6 +76,43 @@ import numpy as np
 # print(arr[0, 1, 2])
 
 # Ele permite a indexação negativa
-arr = np.array([[1,2,3,4,5],[6,7,8,9,10]])
-# Para acessar o numero 10 podemos determinar um valor negativo apos determinar em qual linha ele se encontra
-print(arr[1,-1])
+# arr = np.array([[1,2,3,4,5],[6,7,8,9,10]])
+# # Para acessar o numero 10 podemos determinar um valor negativo apos determinar em qual linha ele se encontra
+# print(arr[1,-1])
+
+# # fatiamento de matrizes -
+# arr = np.array([1,2,3,4,5,6,7])
+# # O fatiamento é realizado apresentando o inicio da fatia e o ate onde ela vai 
+# # exemplo:
+# '''
+#     array = np.array([1,2,3,4,5,6,7])
+    
+# > Para fatiar fazemos assim:
+# array[inicio da fatia:final da fatia]
+# '''
+# # Fatiamento normal -
+# print(arr[1:5])
+# # Fatiamento sem indice inicial -
+# print(arr[:4])
+# # Fatiamento sem indice final -
+# print(arr[1:])
+# # Fatiamento negativo normal -
+# print(arr[-4:-1])
+# # Fatiamento negativo sem indice final -
+# print(arr[:-1])
+# # Fatiamento negativo sem indice inicial -
+# print(arr[-4:])
+# # Fatiamento com salto de 2 -
+# print(arr[1:5:2])
+# # Fatiando com salto de 2 sem dois indices iniciais;
+# print(arr[::2])
+
+
+# # Fatiando Matrizes do tipo 2d -
+# arr = np.array([[1,2,3], [4,5,6]])
+
+# # fatia norrmal -
+# print(arr[1, 1:4])
+# print(arr[0:2, 2])
+# # Podemos pegar o fatiamento das duas linhas da seguinte maneira -
+# print(arr[0:2, 1:4])
