@@ -78,7 +78,8 @@ class App(tk.Tk):
         )
         self.btnConectar.grid(row=1, column=2, sticky='nsew', padx=20, pady=6, ipadx=20)
         self.btnCriar=ttk.Button(
-            self, text='Criar Tabela'
+            self, text='Criar Tabela',
+            command=self.btnCriarTabela_Click
         )
         self.btnCriar.grid(row=2, column=2, sticky='nsew', padx=20, pady=6, ipadx=20)
         self.btnInserir=ttk.Button(
@@ -105,17 +106,41 @@ class App(tk.Tk):
                 user='root',
                 password=''
             )
-            
             cursor = conexao.cursor()
             sql = 'CREATE DATABASE IF NOT EXISTS curso_db'
             cursor.execute(sql)
-            
             self.varResultado.set('Base de dados criada com sucesso.')
             self.lblResultado.configure(background='#99FF99')
         except:
             self.varResultado.set('Erro ao conectar com a base de dados.')
             self.lblResultado.configure(background='#FF9999')
 
+    def btnCriarTabela_Click(self):
+        try:
+            conexao = mysql.connector.connect(
+                host='localhost',
+                user='root',
+                password='',
+                database='curso_db'
+            )
+            cursor = conexao.cursor()
+            sql = '''
+                CREATE TABLE IF NOT EXISTS pessoas(
+                    nome VARCHAR(50),
+                    email VARCHAR(50),
+                    PRIMARY KEY(email)
+                )
+            '''
+            cursor.execute(sql)
+            self.varResultado.set('Tabela criada com sucesso.')
+            self.lblResultado.configure(background='#99FF99')
+        except:
+            self.varResultado.set('Erro ao criar tabela.')
+            self.lblResultado.configure(background='#FF9999')
+    def btnInserir_Click(self):
+        
+        pass
+                
 if __name__ == '__main__':
     app = App()
     app.mainloop()
