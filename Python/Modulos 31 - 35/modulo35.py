@@ -315,3 +315,51 @@ import numpy as np
 # # Devolvendo apenas numeros pares ...
 # x = np.where(arr%2 == 0)
 # print(x)
+
+# Pesquisa cassificada -
+
+# arr = np.array([6,7,8,9])
+
+# # x = np.searchsorted(arr, 7)
+# # x = np.searchsorted(arr, 7, side='right')
+# x = np.searchsorted(arr, [2,4,6]) # Retornou [0,0,1] com o metodo rigth e [0,0,0] sem ele pois o metodo retorna onde os valores devem ser colocados.
+# print(f'O valor esta na posição: {x}')
+
+
+# Ordenando valores-
+# arr = np.array([3,2,0,1])
+# arr = np.array(['Gabriel','Pedro','Flavio','Ana'])
+# arr = np.array([True,False,True])
+
+# arr = np.array([[0,8,6,9],[8,8,1,9],[8,2,8,1]])
+
+# print(np.sort(arr)) # Retorna uma copia com valores ordenados
+
+# Filtrando matrizes -
+# arr = np.array([41,42,43,44])
+# # # Filtramos usando filtros booleanos -
+# # x = [True,False,True,False]
+
+# # nwarr = arr[x] # Os elementos correspondentes em true vao ser mantidos e os com false removidos.
+# # print(nwarr)
+
+# # Criando um filtro com condição unica -
+# # O filtro foi criado de maneira dinamica sem a nescessidade de criar um filtro inteiro dinamicamente.
+# filter_arr = []
+# for element in arr:
+#     if element > 42:
+#         filter_arr.append(True)
+#     else:
+#          filter_arr.append(False)
+         
+# nwArr = arr[filter_arr]
+# print(filter_arr)
+# print(nwArr)
+
+# Criando filtros diretamente do array -
+
+arr = np.array([41,42,43,44])
+# Podemos usar um metodo que meche nisso por nos
+filter_arr = arr > 42
+newArr = arr[filter_arr]
+print(newArr)
