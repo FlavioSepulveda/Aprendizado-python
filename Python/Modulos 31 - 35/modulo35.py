@@ -267,8 +267,51 @@ import numpy as np
 #     print(idx, '', x)
 # 
 # união de matrizes -
-arr1 = np.array([1, 2, 3, 4])
-arr2 = np.array([5, 6, 7, 8])
-# O argumento 'axis' pode ser usado apos a tipla com os valores a serem concatenados para indicar o numero de eixos presentes.
-x = np.concatenate((arr1, arr2))
-print(x)
+# arr1 = np.array([1, 2, 3, 4])
+# arr2 = np.array([5, 6, 7, 8])
+# # O argumento 'axis' pode ser usado apos a tipla com os valores a serem concatenados para indicar o numero de eixos presentes.
+# x = np.concatenate((arr1, arr2))
+# print(x)
+
+# Unindo arrays usando funções pilha -
+
+# arr1 = np.array([1, 2, 3])
+# arr2 = np.array([4, 5, 6])
+
+# # arr = np.stack((arr1, arr2), axis=1)
+# # arr = np.hstack((arr1, arr2))
+# # arr = np.vstack((arr1, arr2))
+# arr = np.dstack((arr1, arr2)) # cria um elemento 3d
+
+# print(arr)
+
+# Divisao de arrays
+# A divisão de arrays é a operação inversa a junção dos arrays, nela utilizamos a função arraysplit para dividir os nossos arrays.
+# Exemplo -
+# array1 = np.array([1,2,3,4,5,6])
+# # Dividir esse array em varios com 'Arraysplit'
+# newArr = np.array_split(array1, 3)
+# print(newArr) # Printa a lista inteira por meio de 3 arrays divididos
+# print(newArr[0])
+# print(newArr[1])
+# print(newArr[2])
+
+# Dividindo arrays - 2D
+# arr = np.array([[1,2, 3],[4,5,6], [7,8,9], [10,11,12]])
+
+# # nArr = np.array_split(arr, 3, axis=1)
+# nArr = np.hsplit(arr,3) # Resulta no mesmo que o array_split utilizando o parametro axis
+
+
+# print(nArr)
+
+# Pesquisando matrizes -
+
+# arr = np.array([1, 2, 3, 4, 5, 4, 4])
+
+# # Pesquisamos utilizando o metodo where
+# # x = np.where(arr == 4)
+
+# # Devolvendo apenas numeros pares ...
+# x = np.where(arr%2 == 0)
+# print(x)
