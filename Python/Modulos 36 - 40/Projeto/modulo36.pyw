@@ -106,7 +106,8 @@ class App(tk.Tk):
         self.btnExcluir.grid(row=5, column=2, sticky='nsew',
                              padx=20, pady=6, ipadx=20)
         self.btnEditar = ttk.Button(
-            self, text='Editar'
+            self, text='Editar',
+            command=self.btnEditar_Click
         )
         self.btnEditar.grid(row=6, column=2, sticky='nsew',
                             padx=20, pady=6, ipadx=20)
@@ -228,9 +229,146 @@ class App(tk.Tk):
             self.lblResultado.configure(background='#FF9999')
     
     def btnExcluir_Click(self):
+        nome = self.varNome.get().strip()
+        email = self.varEmail.get().strip()
         
-        pass
+        if nome == '' or email == '':
+            self.varResultado.set('Por favor selecione um registro para a exclusão.')
+            self.lblResultado.configure(background='#FF9999')
+            self.txtNome.focus()
+        else:
+            try:
+                conexao = mysql.connector.connect(
+                    host='localhost',
+                    user='root',
+                    password='',
+                    database='curso_db'
+                )
+                cursor = conexao.cursor()
+                sql = 'DELETE FROM pessoas WHERE nome = %s AND email = %s'
+                values = (nome, email)
+                cursor.execute(sql, values)
+                conexao.commit()
+                
+                self.varNome.set('')
+                self.varEmail.set('')
+                self.btnProcurar_Click()
+                # Verificando se o registro foi excluido
+                if cursor.rowcount > 0:
+                    self.varResultado.set('Registo apagado.')
+                    self.lblResultado.configure(background='#99FF99')        
+                    self.txtNome.focus()        
+                else:
+                    self.varResultado.set('Insira o registro que deseja excluir.')
+                    self.lblResultado.configure(background='#FF9999')                          
+                
+            except:
+                self.varResultado.set('Erro ao excluir registo.')
+                self.lblResultado.configure(background='#FF9999')
+                
+    def btnEditar_Click(self):
+        # nome = self.varNome.get().strip()
+        # email = self.varEmail.get().strip()
         
+        # reNome = re.fullmatch(r'\b[A-Za-z ]+\b', nome)
+        # reEmail = re.fullmatch(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', email)
+        
+        # if len(self.txtLista.selection()) < 1:
+        #     self.varResultado.set('Selecione um valor para editar.')
+        #     self.lblResultado.configure(background='#FF9999')
+        #     self.txtNome.focus()
+        #     return
+        
+        # if reNome is None:
+        #     self.varResultado.set('Digite um nome para editar.')
+        #     self.lblResultado.configure(background='#FF9999')
+        #     self.txtNome.focus()
+            
+        # elif reEmail is None:
+        #     self.varResultado.set('Digite um email para editar.')
+        #     self.lblResultado.configure(background='#FF9999')
+        #     self.txtEmail.focus()
+        # else:
+        #     try:
+        #         registro = self.txtLista.selection()[0]
+        #         dadosRegistro = self.txtLista.item(registro) #retorna o item salvo em registro
+        #         nomeRegistro = dadosRegistro['values'][0]
+        #         emailRegistro = dadosRegistro['values'][0]
+                
+        #         conexao = mysql.connector.connect(
+        #             host='localhost',
+        #             user='root',
+        #             password='',
+        #             database='curso_db'
+        #         )
+        #         cursor = conexao.cursor()
+        #         sql = 'UPDATE pessoas SET nome = %s AND email = %s WHERE nome = %s AND email = %s'
+        #         values = (nome, email, nomeRegistro, emailRegistro)
+        #         cursor.execute(sql, values)
+
+        #         self.varNome.set('')
+        #         self.varEmial.set('')
+        #         self.btnProcurar_Click()
+                
+        #         self.varResultado.set('Registro editado com sucesso.')
+        #         self.varLabel.configure(background='#99FF99')
+        #         self.txtNome.focus()
+                
+        #     except:
+        #         self.varResultado.set('Erro ao editar Registro.')
+        #         self.lblResultado.configure(background='#FF9999')
+                
+        nome = self.varNome.get().strip()
+        email = self.varEmail.get().strip()
+
+        reNome = re.fullmatch(r"\b[A-Za-z ]+\b", nome)
+        reEmail = re.fullmatch(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b", email)
+
+        if len(self.txtLista.selection()) < 1:
+            self.varResultado.set("Selecione um registro para editar.")
+            self.lblResultado.configure(background="#FF9999")
+            self.txtNome.focus()
+            return
+        
+        if reNome is None:
+            self.varResultado.set("O campo nome é obrigatório.")
+            self.lblResultado.configure(background="#FF9999")
+            self.txtNome.focus()
+        elif reEmail is None:
+            self.varResultado.set("Insira um email válido")
+            self.lblResultado.configure(background="#FF9999")
+            self.txtEmail.focus()
+        else:
+            try:
+                registro = self.txtLista.selection()[0]
+                dadosRegistro = self.txtLista.item(registro)
+                nomeRegistro = dadosRegistro["values"][0]
+                emailRegistro = dadosRegistro["values"][1]
+
+                conexao = mysql.connector.connect(
+                    host="localhost",
+                    user="root",
+                    password="",
+                    database="curso_db"
+                )
+                mycursor = conexao.cursor()
+                sql = "UPDATE pessoas SET nome = %s, email = %s WHERE nome = %s AND email = %s"
+                val = (nome, email, nomeRegistro, emailRegistro)
+                mycursor.execute(sql, val)
+                conexao.commit()
+
+                self.varNome.set("")
+                self.varEmail.set("")
+
+                self.btnProcurar_Click()
+
+                self.varResultado.set("Registro alterado com sucesso.")
+                self.lblResultado.configure(background="#99FF99")
+                self.txtNome.focus()
+            except:
+                self.varResultado.set("Erro ao editar registro.")
+                self.lblResultado.configure(background="#FF9999")
+                
 if __name__ == '__main__':
     app = App()
     app.mainloop()
