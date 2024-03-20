@@ -102,6 +102,55 @@ import seaborn as sns
 # Distribuição uniforme -
 # Usada para descrever a probabilidade de alguns fenomenos tem de acontecer
 
-x = random.uniform(low=-1, high=0,size=1000)
-sns.distplot(x, hist=False)
+# x = random.uniform(low=-1, high=0,size=1000)
+# sns.distplot(x, hist=False)
+# plt.show()
+
+# distribuição logistica
+# Utilizada em aprendizado de maquina;
+
+# x = random.logistic(loc=1, scale=2, size=(2,3))
+# a = random.normal(scale=2, size=1000)
+# sns.distplot(a, hist=False, label='Normal')
+# sns.distplot(x, hist=False, label='Logistica')
+# plt.show()
+
+# Distribuição multinomial -
+# E uma generealização do cenario binomial.
+
+# Ela possue 3 parametros - Lancamento de dados 
+
+# criando lançamento de dados 
+# x = random.multinomial(n=6, pvals=[1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
+# print(x)
+
+# Distribuição exponencial -
+
+# x = random.exponential(scale=2, size=(2,3))
+# sns.distplot(x, hist=False)
+# plt.show()
+
+# Distribuição square -
+
+# x = random.chisquare(df=1, size=1000)
+# sns.distplot(x, hist=False)
+# plt.show()
+
+# Distribuição de Rayleight
+
+# x = random.rayleigh(scale=2, size=(2,3))
+# print(x)
+
+# Distribuição de Pareto.
+
+# x = random.pareto(a=2, size=1000)
+# sns.distplot(x, kde=False)
+# plt.show()
+# print(x)
+
+# Distribuição de zipf
+
+x = random.zipf(a=2, size=1000)
+sns.distplot(x[x<10], kde=False)
 plt.show()
+print(x)
