@@ -237,7 +237,54 @@ from math import log
 
 # Teorema de ptagoras
 
-base, prep = 3, 4
+# base, prep = 3, 4
 
-x = np.hypot(base, prep)
-print(x)
+# x = np.hypot(base, prep)
+# print(x)
+
+# Funções hiperbolicas
+
+# x = np.sinh(np.pi/2)
+# print(x)
+
+# arr = np.array([np.pi/2,np.pi/3,np.pi/4,np.pi/5])
+# x = np.cosh(arr)
+
+# print(x)
+
+# x = np.arcsinh(1.0)
+# print(x)
+
+# arr = np.array([0.1, 0.2, 0.5])
+# x = np.arctanh(arr)
+
+# print(x)
+
+# Conjuntos no python
+
+# convertendo uma matriz em um conjunto -
+# arr = np.array([1,1,1,2,3,4,5,5,6,7])
+# x = np.unique(arr)
+# print(x)
+
+# arr1 = np.array([1,2,3,4])
+# arr2 = np.array([3,4,5,6])
+# newArr = np.union1d(arr1, arr2)
+# print(newArr)
+
+# arr1 = np.array([1,2,3,4])
+# arr2 = np.array([3,4,5,6])
+# newArr = np.intersect1d(arr1, arr2, assume_unique=True) # Esse Atributo 'assume_unique=True' deve sempre ser assumido como true
+# print(newArr)
+
+# set1 = np.array([1,2,3,4])
+# set2 = np.array([3,4,5,6])
+
+# newarr = np.setdiff1d(set1, set2, assume_unique=True) # imprime a diferença
+# print(newarr)
+
+set1 = np.array([1,2,3,4])
+set2 = np.array([3,4,5,6])
+
+newarr = np.setxor1d(set1, set2, assume_unique=True) # imprime a diferença simetrica, imprime os valores que não estão disponiveis nas duas matrizes;
+print(newarr)
