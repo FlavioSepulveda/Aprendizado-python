@@ -164,4 +164,80 @@ from math import log
 # print(x)
 # print(newarr)
 
-# 
+# Diferenças discretas 
+
+# arr1 = np.array([10, 15, 25, 5])
+# # narr = np.diff(arr1)
+# narr = np.diff(arr1, n=2)
+
+# print(narr)
+
+# Minimo Multiplo Comum -
+
+# num1 = 4
+# num2 = 6
+
+# x = np.lcm(num1, num2) # L de Lowest
+# print(x) 
+
+# # Podemos encontrar o lcm de um array inteiro
+# arr = np.array([3, 6, 9])
+# narr = np.lcm.reduce(arr)
+
+# print(narr)
+
+# # Exemplo -
+
+# arrayEx = np.array([1,2,3,4,5,6,7,8,9,10])
+# nExArr = np.lcm.reduce(arrayEx)
+
+# print(nExArr)
+
+# Maior denominador comum
+
+# num1 = 6
+# num2 = 9
+
+# x = np.gcd(num1, num2)
+# print(x)
+
+
+# arr = np.array([20,8,32,36,16])
+# narr = np.gcd.reduce(arr)
+
+# print(narr)
+
+
+# Trigonometria -
+
+# x = np.sin([np.pi/2, np.pi/3, np.pi/4, np.pi/5])
+# print(x)
+
+# arr = np.array([np.pi/2, np.pi/3, np.pi/4, np.pi/5])
+
+# x = np.sin(arr)
+# print(x)
+
+# arr = np.array([90, 180, 270, 360])
+# x = np.deg2rad(arr)
+# print(x)
+
+# arr = np.array([np.pi/2, np.pi, 1.5*np.pi, 2*np.pi])
+# x = np.rad2deg(arr)
+# print(x)
+
+# Encontrando angulos -
+
+# x = np.arcsin(1.0)
+# print(x)
+
+# arr = np.array([1, -1, 0.1])
+# x = np.arcsin(arr)
+# print(x)
+
+# Teorema de ptagoras
+
+base, prep = 3, 4
+
+x = np.hypot(base, prep)
+print(x)
